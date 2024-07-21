@@ -4,7 +4,7 @@
 	"scripts": {
 		"start": "vite",
 		"build": "tsc && vite build && vite build --ssr",
-		"format": "prettier package.json \"resources/**/*.{ts,tsx}\" \"app/**/*.php\" --write"
+		"format": "prettier package.json \"resources/**/*.{ts,tsx}\" \"app/**/*.php\" \"routes/**/*.php\" --write"
 	},
 	"devDependencies": {
 		"@headlessui/react": "^2.0.0",
