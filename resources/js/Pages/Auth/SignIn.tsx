@@ -1,17 +1,17 @@
 import { useEffect, FormEventHandler } from "react";
 import Checkbox from "@/Components/Checkbox";
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
+import { UnauthorizedLayout } from "@/Layouts/UnauthorizedLayout";
+import { Divider } from "@/Components/Divider/Divider";
+import { GoogleIcon } from "@/Components/Icons/GoogleIcon";
 
 export default function Login({
-	status,
 	canResetPassword,
 }: {
-	status?: string;
 	canResetPassword: boolean;
 }) {
 	const { data, setData, post, processing, errors, reset } = useForm({
@@ -33,14 +33,26 @@ export default function Login({
 	};
 
 	return (
-		<GuestLayout>
-			<Head title="Log in" />
+		<UnauthorizedLayout
+			title="Sign in to your account"
+			description="Don't have an account?"
+			desciptionLink={{
+				href: "/sign-up",
+				text: "Sign up",
+			}}
+		>
+			<Head title="Sign in" />
 
-			{status && (
-				<div className="mb-4 font-medium text-sm text-green-600">
-					{status}
-				</div>
-			)}
+			<a
+				href="#"
+				className="inline-flex w-full items-center justify-center space-x-2 rounded-md border border-gray-200 bg-white py-2 text-gray-900 shadow-sm hover:bg-gray-50 mb-8"
+			>
+				<GoogleIcon />
+
+				<span className="font-medium text-sm">Sign in with Google</span>
+			</a>
+
+			<Divider className="mb-6" />
 
 			<form onSubmit={submit}>
 				<div>
@@ -91,21 +103,24 @@ export default function Login({
 					</label>
 				</div>
 
-				<div className="flex items-center justify-end mt-4">
-					{canResetPassword && (
-						<Link
-							href={route("password.request")}
-							className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-						>
-							Forgot your password?
-						</Link>
-					)}
-
-					<PrimaryButton className="ms-4" disabled={processing}>
-						Log in
+				<div className="flex flex-col mt-4">
+					<PrimaryButton className="mb-4" disabled={processing}>
+						Sign in
 					</PrimaryButton>
+
+					{canResetPassword && (
+						<p className="text-sm text-gray-600 mb-2">
+							Forgot your password?{" "}
+							<Link
+								href={route("password.request")}
+								className="text-emerald-700 font-medium hover:text-emerald-800"
+							>
+								Reset password
+							</Link>
+						</p>
+					)}
 				</div>
 			</form>
-		</GuestLayout>
+		</UnauthorizedLayout>
 	);
 }

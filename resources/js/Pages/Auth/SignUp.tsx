@@ -1,10 +1,12 @@
 import { useEffect, FormEventHandler } from "react";
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
+import { UnauthorizedLayout } from "@/Layouts/UnauthorizedLayout";
+import { GoogleIcon } from "@/Components/Icons/GoogleIcon";
+import { Divider } from "@/Components/Divider/Divider";
 
 export default function Register() {
 	const { data, setData, post, processing, errors, reset } = useForm({
@@ -27,8 +29,26 @@ export default function Register() {
 	};
 
 	return (
-		<GuestLayout>
-			<Head title="Register" />
+		<UnauthorizedLayout
+			title="Create a new account"
+			description="Already have an account?"
+			desciptionLink={{
+				href: "/sign-in",
+				text: "Sign in",
+			}}
+		>
+			<Head title="Sign up" />
+
+			<a
+				href="#"
+				className="inline-flex w-full items-center justify-center space-x-2 rounded-md border border-gray-200 bg-white py-2 text-gray-900 shadow-sm hover:bg-gray-50 mb-8"
+			>
+				<GoogleIcon />
+
+				<span className="font-medium text-sm">Sign up with Google</span>
+			</a>
+
+			<Divider className="mb-6" />
 
 			<form onSubmit={submit}>
 				<div>
@@ -107,19 +127,10 @@ export default function Register() {
 					/>
 				</div>
 
-				<div className="flex items-center justify-end mt-4">
-					<Link
-						href={route("login")}
-						className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-					>
-						Already registered?
-					</Link>
-
-					<PrimaryButton className="ms-4" disabled={processing}>
-						Register
-					</PrimaryButton>
-				</div>
+				<PrimaryButton className="mt-6" disabled={processing}>
+					Sign up
+				</PrimaryButton>
 			</form>
-		</GuestLayout>
+		</UnauthorizedLayout>
 	);
 }

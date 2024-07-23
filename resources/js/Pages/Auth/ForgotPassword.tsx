@@ -1,9 +1,10 @@
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import { Head, useForm } from "@inertiajs/react";
 import { FormEventHandler } from "react";
+import { UnauthorizedLayout } from "@/Layouts/UnauthorizedLayout";
+import InputLabel from "@/Components/InputLabel";
 
 export default function ForgotPassword({ status }: { status?: string }) {
 	const { data, setData, post, processing, errors } = useForm({
@@ -17,22 +18,15 @@ export default function ForgotPassword({ status }: { status?: string }) {
 	};
 
 	return (
-		<GuestLayout>
-			<Head title="Forgot Password" />
-
-			<div className="mb-4 text-sm text-gray-600">
-				Forgot your password? No problem. Just let us know your email
-				address and we will email you a password reset link that will
-				allow you to choose a new one.
-			</div>
-
-			{status && (
-				<div className="mb-4 font-medium text-sm text-green-600">
-					{status}
-				</div>
-			)}
+		<UnauthorizedLayout
+			title="Reset password"
+			description="Reset link will be sent to your email"
+		>
+			<Head title="Forgot password" />
 
 			<form onSubmit={submit}>
+				<InputLabel htmlFor="email" value="Email" />
+
 				<TextInput
 					id="email"
 					type="email"
@@ -45,12 +39,10 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
 				<InputError message={errors.email} className="mt-2" />
 
-				<div className="flex items-center justify-end mt-4">
-					<PrimaryButton className="ms-4" disabled={processing}>
-						Email Password Reset Link
-					</PrimaryButton>
-				</div>
+				<PrimaryButton className="mt-6" disabled={processing}>
+					Send reset link
+				</PrimaryButton>
 			</form>
-		</GuestLayout>
+		</UnauthorizedLayout>
 	);
 }

@@ -1,10 +1,10 @@
 import { useEffect, FormEventHandler } from "react";
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import { Head, useForm } from "@inertiajs/react";
+import { UnauthorizedLayout } from "@/Layouts/UnauthorizedLayout";
 
 export default function ResetPassword({
 	token,
@@ -33,8 +33,11 @@ export default function ResetPassword({
 	};
 
 	return (
-		<GuestLayout>
-			<Head title="Reset Password" />
+		<UnauthorizedLayout
+			title="Reset password"
+			description="Choose a new password"
+		>
+			<Head title="Reset password" />
 
 			<form onSubmit={submit}>
 				<div>
@@ -93,12 +96,10 @@ export default function ResetPassword({
 					/>
 				</div>
 
-				<div className="flex items-center justify-end mt-4">
-					<PrimaryButton className="ms-4" disabled={processing}>
-						Reset Password
-					</PrimaryButton>
-				</div>
+				<PrimaryButton className="mt-6" disabled={processing}>
+					Reset password
+				</PrimaryButton>
 			</form>
-		</GuestLayout>
+		</UnauthorizedLayout>
 	);
 }
