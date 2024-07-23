@@ -2,26 +2,33 @@
 
 namespace App\Models;
 
+use App\Domains\Core\Traits\HasNamedId;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+	use HasNamedId;
 
-    /** @var array<int, string> */
-    protected $fillable = ["name", "email", "password"];
+	use HasFactory;
 
-    /**  @var array<int, string> */
-    protected $hidden = ["password", "remember_token"];
+	use Notifiable;
 
-    /**  @return array<string, string> */
-    protected function casts(): array
-    {
-        return [
-            "email_verified_at" => "datetime",
-            "password" => "hashed",
-        ];
-    }
+	protected string $namedIdPrefix = "usr";
+
+	/** @var array<int, string> */
+	protected $guarded = [];
+
+	/**  @var array<int, string> */
+	protected $hidden = ["password", "remember_token"];
+
+	/**  @return array<string, string> */
+	protected function casts(): array
+	{
+		return [
+			"email_verified_at" => "datetime",
+			"password" => "hashed",
+		];
+	}
 }
