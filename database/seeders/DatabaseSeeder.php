@@ -19,10 +19,12 @@ class DatabaseSeeder extends Seeder
             'tenant_id' => $tenant->id,
         ]);
 
-        User::factory()->create([
+        $user = User::factory()->create([
             'name' => 'John Doe',
             'email' => 'test@example.com',
             'last_organization_id' => $organization->id,
         ]);
+
+        $organization->users()->attach($user);
     }
 }

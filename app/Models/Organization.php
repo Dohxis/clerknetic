@@ -8,12 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Organization extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	use HasNamedId;
+    use HasNamedId;
 
-	protected string $namedIdPrefix = "org";
+    protected string $namedIdPrefix = "org";
 
-	/** @var array<int, string> */
-	protected $guarded = [];
+    /** @var array<int, string> */
+    protected $guarded = [];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
 }

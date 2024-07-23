@@ -9,26 +9,31 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-	use HasNamedId;
+    use HasNamedId;
 
-	use HasFactory;
+    use HasFactory;
 
-	use Notifiable;
+    use Notifiable;
 
-	protected string $namedIdPrefix = "usr";
+    protected string $namedIdPrefix = "usr";
 
-	/** @var array<int, string> */
-	protected $guarded = [];
+    /** @var array<int, string> */
+    protected $guarded = [];
 
-	/**  @var array<int, string> */
-	protected $hidden = ["password", "remember_token"];
+    /**  @var array<int, string> */
+    protected $hidden = ["password", "remember_token"];
 
-	/**  @return array<string, string> */
-	protected function casts(): array
-	{
-		return [
-			"email_verified_at" => "datetime",
-			"password" => "hashed",
-		];
-	}
+    /**  @return array<string, string> */
+    protected function casts(): array
+    {
+        return [
+            "email_verified_at" => "datetime",
+            "password" => "hashed",
+        ];
+    }
+
+    public function organizations()
+    {
+        return $this->belongsToMany(Organization::class)->withTimestamps();
+    }
 }
