@@ -11,19 +11,18 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $tenant = Tenant::create([]);
+        $tenant = Tenant::create(['id' => 'tnt_01j3fhd5m8fcy9n6xmnyqkfr27']);
 
-        Organization::create([
+        $organization = Organization::create([
             'slug' => 'acme',
             'name' => 'Acme Inc.',
             'tenant_id' => $tenant->id,
         ]);
 
-        Tenant::all()->runForEach(function () {
-            User::factory()->create([
-                'name' => 'John Doe',
-                'email' => 'test@example.com',
-            ]);
-        });
+        User::factory()->create([
+            'name' => 'John Doe',
+            'email' => 'test@example.com',
+            'last_organization_id' => $organization->id,
+        ]);
     }
 }
