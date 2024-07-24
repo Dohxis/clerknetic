@@ -2,20 +2,20 @@
 
 namespace App\Domains\Framework\Authentication\Forms;
 
-use Arpite\Authentication\Actions\GetHomepageUrlAction;
-use Arpite\Authentication\Exceptions\HomepageNotFoundException;
-use Arpite\Authentication\Pages\AuthenticationPages;
-use Arpite\Authentication\Pages\ForgotPasswordPage;
-use Arpite\Component\Components\Flex\Enums\Justify;
-use Arpite\Component\Components\Flex\Flex;
-use Arpite\Component\Components\Link\Link;
-use Arpite\Component\Enums\Align;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Form\Fields\CheckboxField;
-use Arpite\Form\Fields\TextField;
-use Arpite\Form\Form;
-use Arpite\Form\Form\FormButton;
-use Arpite\Form\ProcessableForm;
+use App\Domains\Framework\Authentication\Actions\GetHomepageUrlAction;
+use App\Domains\Framework\Authentication\Exceptions\HomepageNotFoundException;
+use App\Domains\Framework\Authentication\Pages\AuthenticationPages;
+use App\Domains\Framework\Authentication\Pages\ForgotPasswordPage;
+use App\Domains\Framework\Component\Components\Flex\Enums\Justify;
+use App\Domains\Framework\Component\Components\Flex\Flex;
+use App\Domains\Framework\Component\Components\Link\Link;
+use App\Domains\Framework\Component\Enums\Align;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Form\Fields\CheckboxField;
+use App\Domains\Framework\Form\Fields\TextField;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\Form\FormButton;
+use App\Domains\Framework\Form\ProcessableForm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;

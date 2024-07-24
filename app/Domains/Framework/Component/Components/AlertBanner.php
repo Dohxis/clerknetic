@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Component\Components;
 
-use Arpite\Component\Component;
-use Arpite\Component\Enums\Icon;
-use Arpite\Component\Traits\HasButtons;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasIcon;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Enums\Icon;
+use App\Domains\Framework\Component\Traits\HasButtons;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasIcon;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class AlertBanner extends Component
 {

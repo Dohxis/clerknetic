@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Component\Components\PricingPlans;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasButtons;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasButtons;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class CurrentPricingPlan extends Component
 {

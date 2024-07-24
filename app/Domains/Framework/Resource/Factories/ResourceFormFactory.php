@@ -5,9 +5,9 @@ namespace App\Domains\Framework\Resource\Factories;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Arpite\Core\Utilities\Translate;
-use Arpite\Form\Fields\Field;
-use Arpite\Form\Form;
+use App\Domains\Framework\Core\Utilities\Translate;
+use App\Domains\Framework\Form\Fields\Field;
+use App\Domains\Framework\Form\Form;
 
 class ResourceFormFactory
 {

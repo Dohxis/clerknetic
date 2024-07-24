@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Component;
 
-use Arpite\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Interfaces\Exportable;
 
 abstract class Component implements Exportable
 {

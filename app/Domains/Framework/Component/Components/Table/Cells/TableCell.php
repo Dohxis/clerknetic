@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Component\Components\Table\Cells;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Table\Enums\StatusImage;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasImage;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Table\Enums\StatusImage;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasImage;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class TableCell extends Component
 {

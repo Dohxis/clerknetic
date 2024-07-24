@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components\Chart;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Chart\Enums\DataType;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Chart\Enums\DataType;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Chart extends Component
 {

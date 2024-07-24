@@ -2,17 +2,17 @@
 
 namespace App\Domains\Framework\Form;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
-use Arpite\Component\Components\Wizard\Enums\WizardHeaderDesign;
-use Arpite\Component\Components\Wizard\Partials\WizardStep;
-use Arpite\Component\Components\Wizard\WizardContent;
-use Arpite\Component\Components\Wizard\WizardHeader;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Form\Actions\GetNestedFieldsValidationRulesAction;
-use Arpite\Form\Enums\OperationResponseType;
-use Arpite\Form\Form\FormButton;
-use Arpite\Form\ProcessableWizard\ProcessableWizardForm;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
+use App\Domains\Framework\Component\Components\Wizard\Enums\WizardHeaderDesign;
+use App\Domains\Framework\Component\Components\Wizard\Partials\WizardStep;
+use App\Domains\Framework\Component\Components\Wizard\WizardContent;
+use App\Domains\Framework\Component\Components\Wizard\WizardHeader;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsValidationRulesAction;
+use App\Domains\Framework\Form\Enums\OperationResponseType;
+use App\Domains\Framework\Form\Form\FormButton;
+use App\Domains\Framework\Form\ProcessableWizard\ProcessableWizardForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;

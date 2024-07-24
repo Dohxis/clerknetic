@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Authentication\Operations;
 
-use Arpite\Core\Utilities\Notification;
-use Arpite\Form\Operation;
-use Arpite\Form\Traits\HasStore;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Form\Operation;
+use App\Domains\Framework\Form\Traits\HasStore;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Throwable;

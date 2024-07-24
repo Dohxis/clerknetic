@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Page\Utilities;
 
-use Arpite\Page\Page;
+use App\Domains\Framework\Page\Page;
 use Illuminate\Support\Str;
 
 class Resolve

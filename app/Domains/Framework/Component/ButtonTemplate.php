@@ -2,15 +2,15 @@
 
 namespace App\Domains\Framework\Component;
 
-use Arpite\Component\Components\Alert\Alert;
-use Arpite\Component\Components\Modal\Modal;
-use Arpite\Component\Traits\HasAction;
-use Arpite\Component\Traits\HasButtonColor;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Form\Operation;
-use Arpite\Page\Page;
-use Arpite\Page\Utilities\Link;
+use App\Domains\Framework\Component\Components\Alert\Alert;
+use App\Domains\Framework\Component\Components\Modal\Modal;
+use App\Domains\Framework\Component\Traits\HasAction;
+use App\Domains\Framework\Component\Traits\HasButtonColor;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Form\Operation;
+use App\Domains\Framework\Page\Page;
+use App\Domains\Framework\Page\Utilities\Link;
 
 abstract class ButtonTemplate extends Component
 {

@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Authentication\Pages;
 
-use Arpite\Authentication\Forms\UserEditForm;
-use Arpite\Page\Page;
+use App\Domains\Framework\Authentication\Forms\UserEditForm;
+use App\Domains\Framework\Page\Page;
 
 class UserEditPage extends Page
 {

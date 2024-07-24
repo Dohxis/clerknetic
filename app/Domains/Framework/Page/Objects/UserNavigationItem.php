@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Page\Objects;
 
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Interfaces\Exportable;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Page\Page;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Page\Page;
 
 class UserNavigationItem implements Exportable
 {

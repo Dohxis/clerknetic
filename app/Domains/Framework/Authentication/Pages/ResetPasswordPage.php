@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Authentication\Pages;
 
-use Arpite\Authentication\Forms\ResetPasswordForm;
-use Arpite\Component\Components\Panel;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\CentralLayout;
-use Arpite\Layout\Layouts\UnauthorizedLayout\UnauthorizedLayout;
-use Arpite\Page\Page;
+use App\Domains\Framework\Authentication\Forms\ResetPasswordForm;
+use App\Domains\Framework\Component\Components\Panel;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\CentralLayout;
+use App\Domains\Framework\Layout\Layouts\UnauthorizedLayout\UnauthorizedLayout;
+use App\Domains\Framework\Page\Page;
 
 class ResetPasswordPage extends Page
 {

@@ -2,14 +2,14 @@
 
 namespace App\Domains\Framework\Authentication\Forms;
 
-use Arpite\Authentication\Jobs\SendResetPasswordMailJob;
-use Arpite\Authentication\Pages\ForgotPasswordEmailSentPage;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Form\Fields\TextField;
-use Arpite\Form\Form;
-use Arpite\Form\Form\FormButton;
-use Arpite\Form\ProcessableForm;
-use Arpite\Page\Utilities\Link;
+use App\Domains\Framework\Authentication\Jobs\SendResetPasswordMailJob;
+use App\Domains\Framework\Authentication\Pages\ForgotPasswordEmailSentPage;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Form\Fields\TextField;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\Form\FormButton;
+use App\Domains\Framework\Form\ProcessableForm;
+use App\Domains\Framework\Page\Utilities\Link;
 use Domain\Team\Models\User;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;

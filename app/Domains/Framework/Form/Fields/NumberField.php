@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Form\Fields;
 
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Form\Fields\Traits\HasMinAndMax;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Form\Fields\Traits\HasMinAndMax;
 
 /**
  * @extends Field<?int>

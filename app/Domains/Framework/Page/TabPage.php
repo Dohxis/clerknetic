@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Page;
 
-use Arpite\Core\Traits\HasResolveHelpers;
+use App\Domains\Framework\Core\Traits\HasResolveHelpers;
 use Exception;
 
 abstract class TabPage extends Page

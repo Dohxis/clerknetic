@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Component\Traits;
 
-use Arpite\Component\Components\Button\Enums\ButtonDesign;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Components\Button\Enums\ButtonDesign;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 trait HasButtonDesign
 {

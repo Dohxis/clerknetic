@@ -4,11 +4,11 @@ namespace App\Domains\Framework\Resource\Traits;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Arpite\Component\Component;
-use Arpite\Form\Actions\GetNestedFieldsAction;
-use Arpite\Form\Fields\Field;
-use Arpite\Form\Fields\TextField;
-use Arpite\Resource\Enums\ResourcePageType;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsAction;
+use App\Domains\Framework\Form\Fields\Field;
+use App\Domains\Framework\Form\Fields\TextField;
+use App\Domains\Framework\Resource\Enums\ResourcePageType;
 
 trait HasResourceFields
 {

@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Component\Components\Metric;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Metric\Enums\MetricTrend;
-use Arpite\Component\Traits\HasIcon;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Metric\Enums\MetricTrend;
+use App\Domains\Framework\Component\Traits\HasIcon;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Metric extends Component
 {

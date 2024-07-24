@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Form\Fields;
 
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Illuminate\Validation\Rules\Password;
 
 /**

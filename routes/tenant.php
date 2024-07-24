@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\DashboardController;
+use App\Domains\Core\Middlewares\HandleInertiaRequestsMiddleware;
+use App\Domains\Workflow\Pages\WorkflowsPage\WorkflowsPage;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Stancl\Tenancy\Middleware\InitializeTenancyByPath;
@@ -10,12 +11,10 @@ use Stancl\Tenancy\Middleware\InitializeTenancyByPath;
 Route::group(
     [
         "prefix" => "/{tenant}",
-        "middleware" => [InitializeTenancyByPath::class],
+        "middleware" => [HandleInertiaRequestsMiddleware::class, InitializeTenancyByPath::class],
     ],
     function () {
-        Route::get("/dashboard", [DashboardController::class, "index"])->name(
-            "dashboard"
-        );
+        WorkflowsPage::register();
 
         Route::middleware("auth")->group(function () {
             Route::get("/profile", [ProfileController::class, "edit"])->name(

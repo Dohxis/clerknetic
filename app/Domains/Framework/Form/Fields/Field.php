@@ -5,13 +5,13 @@ namespace App\Domains\Framework\Form\Fields;
 use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Arpite\Component\Component;
-use Arpite\Component\Components\Text;
-use Arpite\Component\Rules\DeepEqualRule;
-use Arpite\Component\Traits\HasDisabled;
-use Arpite\ResourceFieldConfiguration\Traits\HasResourceConfigurations;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Form\Fields\Classes\Dependee;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Text;
+use App\Domains\Framework\Component\Rules\DeepEqualRule;
+use App\Domains\Framework\Component\Traits\HasDisabled;
+use App\Domains\Framework\ResourceFieldConfiguration\Traits\HasResourceConfigurations;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Form\Fields\Classes\Dependee;
 
 /**
  * @template TDefaultValue

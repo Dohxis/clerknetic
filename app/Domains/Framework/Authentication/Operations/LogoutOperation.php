@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Authentication\Operations;
 
-use Arpite\Authentication\Actions\LogoutUserAction;
-use Arpite\Form\Operation;
+use App\Domains\Framework\Authentication\Actions\LogoutUserAction;
+use App\Domains\Framework\Form\Operation;
 
 class LogoutOperation extends Operation
 {

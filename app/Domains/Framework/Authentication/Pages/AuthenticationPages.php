@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Authentication\Pages;
 
-use Arpite\Authentication\Actions\GetHomepageUrlAction;
+use App\Domains\Framework\Authentication\Actions\GetHomepageUrlAction;
 use Illuminate\Support\Facades\Route;
-use Arpite\Authentication\Operations\LogoutOperation;
+use App\Domains\Framework\Authentication\Operations\LogoutOperation;
 
 class AuthenticationPages
 {

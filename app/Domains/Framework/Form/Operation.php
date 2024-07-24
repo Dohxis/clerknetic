@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Form;
 
-use Arpite\Core\Traits\HasRegisterRoutes;
-use Arpite\Core\Traits\HasResolveHelpers;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Core\Utilities\RouteUtility;
-use Arpite\Form\Actions\IsInertiaRequestAction;
-use Arpite\Form\Enums\OperationResponseType;
+use App\Domains\Framework\Core\Traits\HasRegisterRoutes;
+use App\Domains\Framework\Core\Traits\HasResolveHelpers;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Core\Utilities\RouteUtility;
+use App\Domains\Framework\Form\Actions\IsInertiaRequestAction;
+use App\Domains\Framework\Form\Enums\OperationResponseType;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;

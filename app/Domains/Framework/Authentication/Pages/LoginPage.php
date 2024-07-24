@@ -2,13 +2,13 @@
 
 namespace App\Domains\Framework\Authentication\Pages;
 
-use Arpite\Authentication\Forms\LoginForm;
-use Arpite\Component\Components\Link\Link;
-use Arpite\Component\Components\Panel;
-use Arpite\Component\Components\Text;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\CentralLayout;
-use Arpite\Page\Page;
+use App\Domains\Framework\Authentication\Forms\LoginForm;
+use App\Domains\Framework\Component\Components\Link\Link;
+use App\Domains\Framework\Component\Components\Panel;
+use App\Domains\Framework\Component\Components\Text;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\CentralLayout;
+use App\Domains\Framework\Page\Page;
 
 class LoginPage extends Page
 {

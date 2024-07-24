@@ -4,7 +4,7 @@ namespace App\Domains\Framework\Authentication\Factories;
 
 use Domain\Team\Models\User;
 use Illuminate\Validation\Rule;
-use Arpite\Form\Fields\TextField;
+use App\Domains\Framework\Form\Fields\TextField;
 
 class UserFormFactory
 {

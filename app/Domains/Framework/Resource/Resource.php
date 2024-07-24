@@ -13,19 +13,19 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Inertia\Response;
 use LogicException;
-use Arpite\Core\Traits\HasRegisterRoutes;
-use Arpite\Core\Traits\HasResolveHelpers;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Core\Utilities\RouteUtility;
-use Arpite\Core\Utilities\Translate;
-use Arpite\Form\Fields\Field;
-use Arpite\Resource\Actions\HandleResourceRouteIndexAction;
-use Arpite\Resource\Enums\ResourcePageType;
-use Arpite\Resource\Traits\HasResourceFields;
-use Arpite\Resource\Factories\ResourceFormFactory;
-use Arpite\Form\Form;
-use Arpite\Form\Traits\HasCanHaveStore;
-use Arpite\Responses\StructuredPageResponse;
+use App\Domains\Framework\Core\Traits\HasRegisterRoutes;
+use App\Domains\Framework\Core\Traits\HasResolveHelpers;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Core\Utilities\RouteUtility;
+use App\Domains\Framework\Core\Utilities\Translate;
+use App\Domains\Framework\Form\Fields\Field;
+use App\Domains\Framework\Resource\Actions\HandleResourceRouteIndexAction;
+use App\Domains\Framework\Resource\Enums\ResourcePageType;
+use App\Domains\Framework\Resource\Traits\HasResourceFields;
+use App\Domains\Framework\Resource\Factories\ResourceFormFactory;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\Traits\HasCanHaveStore;
+use App\Domains\Framework\Responses\StructuredPageResponse;
 
 /**
  * @template TModelClass of Model

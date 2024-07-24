@@ -10,16 +10,16 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Str;
 use Inertia\Response;
-use Arpite\Component\Component;
-use Arpite\Component\Components\Button\Button;
-use Arpite\Component\Components\Link\Link;
-use Arpite\Component\Components\PaginatedTable\PaginatedTable;
-use Arpite\Component\Components\Table\Cells\TableLinks;
-use Arpite\Component\Components\Table\TableRow;
-use Arpite\Component\Components\Text;
-use Arpite\Component\Enums\Icon;
-use Arpite\Core\Utilities\Translate;
-use Arpite\Responses\StructuredPageResponse;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Button\Button;
+use App\Domains\Framework\Component\Components\Link\Link;
+use App\Domains\Framework\Component\Components\PaginatedTable\PaginatedTable;
+use App\Domains\Framework\Component\Components\Table\Cells\TableLinks;
+use App\Domains\Framework\Component\Components\Table\TableRow;
+use App\Domains\Framework\Component\Components\Text;
+use App\Domains\Framework\Component\Enums\Icon;
+use App\Domains\Framework\Core\Utilities\Translate;
+use App\Domains\Framework\Responses\StructuredPageResponse;
 
 class HandleResourceRouteIndexAction
 {

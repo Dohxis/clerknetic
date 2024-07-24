@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Authentication\Controllers;
 
-use Arpite\Core\Utilities\Notification;
+use App\Domains\Framework\Core\Utilities\Notification;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
 

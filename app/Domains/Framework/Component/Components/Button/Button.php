@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Component\Components\Button;
 
-use Arpite\Component\ButtonTemplate;
-use Arpite\Component\Traits\HasButtonDesign;
-use Arpite\Component\Traits\HasDisabled;
-use Arpite\Component\Traits\HasIcon;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\ButtonTemplate;
+use App\Domains\Framework\Component\Traits\HasButtonDesign;
+use App\Domains\Framework\Component\Traits\HasDisabled;
+use App\Domains\Framework\Component\Traits\HasIcon;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Button extends ButtonTemplate
 {

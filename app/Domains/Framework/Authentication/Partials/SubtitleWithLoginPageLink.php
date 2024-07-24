@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Authentication\Partials;
 
-use Arpite\Component\Components\Link\Link;
-use Arpite\Component\Components\Text;
+use App\Domains\Framework\Component\Components\Link\Link;
+use App\Domains\Framework\Component\Components\Text;
 
 class SubtitleWithLoginPageLink
 {

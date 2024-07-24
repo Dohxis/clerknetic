@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Authentication\Pages;
 
-use Arpite\Authentication\Forms\RegisterForm;
-use Arpite\Authentication\Partials\SubtitleWithLoginPageLink;
-use Arpite\Component\Components\Panel;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\CentralLayout;
-use Arpite\Page\Page;
+use App\Domains\Framework\Authentication\Forms\RegisterForm;
+use App\Domains\Framework\Authentication\Partials\SubtitleWithLoginPageLink;
+use App\Domains\Framework\Component\Components\Panel;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\CentralLayout;
+use App\Domains\Framework\Page\Page;
 
 class RegisterPage extends Page
 {

@@ -4,14 +4,14 @@ namespace App\Domains\Framework\Responses;
 
 use Inertia\Inertia;
 use Inertia\Response;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\TopSideLayout;
-use Arpite\Page\Resolvers\LayoutResolver;
-use Arpite\Page\Resolvers\NavigationResolver;
-use Arpite\Page\Resolvers\UserNavigationResolver;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\TopSideLayout;
+use App\Domains\Framework\Page\Resolvers\LayoutResolver;
+use App\Domains\Framework\Page\Resolvers\NavigationResolver;
+use App\Domains\Framework\Page\Resolvers\UserNavigationResolver;
 
 class StructuredPageResponse
 {

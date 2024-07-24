@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Page\Resolvers;
 
-use Arpite\Authentication\Pages\AuthenticationPages;
-use Arpite\Authentication\Pages\UserEditPage;
-use Arpite\Page\Objects\UserNavigationItem;
+use App\Domains\Framework\Authentication\Pages\AuthenticationPages;
+use App\Domains\Framework\Authentication\Pages\UserEditPage;
+use App\Domains\Framework\Page\Objects\UserNavigationItem;
 
 class UserNavigationResolver
 {

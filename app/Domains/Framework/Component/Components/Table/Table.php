@@ -2,14 +2,14 @@
 
 namespace App\Domains\Framework\Component\Components\Table;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\EmptyState;
-use Arpite\Component\Components\Panel;
-use Arpite\Component\Traits\HasActions;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Component\Traits\HasWithPanel;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\EmptyState;
+use App\Domains\Framework\Component\Components\Panel;
+use App\Domains\Framework\Component\Traits\HasActions;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Component\Traits\HasWithPanel;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Exception;
 use Illuminate\Support\Str;
 

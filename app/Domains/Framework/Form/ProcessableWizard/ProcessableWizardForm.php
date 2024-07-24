@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Form\ProcessableWizard;
 
-use Arpite\Form\Form;
-use Arpite\Form\ProcessableWizard;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\ProcessableWizard;
 
 class ProcessableWizardForm
 {

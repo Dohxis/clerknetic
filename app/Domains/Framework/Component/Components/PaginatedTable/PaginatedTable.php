@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Component\Components\PaginatedTable;
 
-use Arpite\Component\Components\PaginatedTable\Actions\GeneratePaginationLinksAction;
-use Arpite\Component\Components\Table\Table;
-use Arpite\Component\Components\Table\TableRow;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Components\PaginatedTable\Actions\GeneratePaginationLinksAction;
+use App\Domains\Framework\Component\Components\Table\Table;
+use App\Domains\Framework\Component\Components\Table\TableRow;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Exception;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;

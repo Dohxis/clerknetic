@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Layout\Layouts\UnauthorizedLayout;
 
-use Arpite\Component\Components\Text;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\UnauthorizedLayout\Enums\Width;
+use App\Domains\Framework\Component\Components\Text;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\UnauthorizedLayout\Enums\Width;
 
 class UnauthorizedLayout extends Layout
 {

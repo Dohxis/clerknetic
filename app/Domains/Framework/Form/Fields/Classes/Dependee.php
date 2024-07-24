@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Form\Fields\Classes;
 
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Core\Interfaces\Exportable;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Form\Actions\GetNestedFieldsDefaultValuesAction;
-use Arpite\Form\Actions\GetNestedFieldsValidationRulesAction;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsDefaultValuesAction;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsValidationRulesAction;
 
 class Dependee implements Exportable
 {

@@ -2,13 +2,13 @@
 
 namespace App\Domains\Framework\Component\Components\Modal;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Modal\Enums\ModalDesign;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Form\Form;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Modal\Enums\ModalDesign;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Form\Form;
 use Exception;
 
 class Modal extends Component

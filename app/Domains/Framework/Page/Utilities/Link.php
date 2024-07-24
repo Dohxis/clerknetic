@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Page\Utilities;
 
-use Arpite\Form\Operation;
-use Arpite\Page\Page;
+use App\Domains\Framework\Form\Operation;
+use App\Domains\Framework\Page\Page;
 use Illuminate\Support\Str;
 
 class Link

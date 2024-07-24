@@ -2,20 +2,20 @@
 
 namespace App\Domains\Framework\Form;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
-use Arpite\Component\Traits\HasActions;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Component\Traits\HasPreserveScroll;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Component\Traits\HasWithPanel;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Core\Utilities\NodesUtility;
-use Arpite\Form\Actions\GetNestedFieldsDefaultValuesAction;
-use Arpite\Form\Actions\GetNestedFieldsValidationRulesAction;
-use Arpite\Form\Enums\OperationResponseType;
-use Arpite\Form\Form\FormButton;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
+use App\Domains\Framework\Component\Traits\HasActions;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Component\Traits\HasPreserveScroll;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Component\Traits\HasWithPanel;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\NodesUtility;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsDefaultValuesAction;
+use App\Domains\Framework\Form\Actions\GetNestedFieldsValidationRulesAction;
+use App\Domains\Framework\Form\Enums\OperationResponseType;
+use App\Domains\Framework\Form\Form\FormButton;
 use Exception;
 
 class Form extends Component

@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components\Tabs;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Tabs\Enums\TabsDesign;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Tabs\Enums\TabsDesign;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Tabs extends Component
 {

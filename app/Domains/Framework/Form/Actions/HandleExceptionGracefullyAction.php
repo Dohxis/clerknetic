@@ -6,7 +6,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\ValidationException;
-use Arpite\Core\Utilities\Notification;
+use App\Domains\Framework\Core\Utilities\Notification;
 use Throwable;
 
 class HandleExceptionGracefullyAction

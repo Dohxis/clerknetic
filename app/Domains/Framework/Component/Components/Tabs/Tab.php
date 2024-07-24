@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Component\Components\Tabs;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasActions;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasActions;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Tab extends Component
 {

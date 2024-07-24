@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Form\Actions;
 
-use Arpite\Component\Component;
-use Arpite\Form\Fields\Field;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Form\Fields\Field;
 
 class GetNestedFieldsDefaultValuesAction
 {

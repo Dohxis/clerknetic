@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Layout;
 
-use Arpite\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Interfaces\Exportable;
 
 abstract class Layout implements Exportable
 {

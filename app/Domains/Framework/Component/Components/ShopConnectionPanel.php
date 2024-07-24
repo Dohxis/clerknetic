@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Button\Button;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Button\Button;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Domain\Integration\Models\Integration;
 use Exception;
 

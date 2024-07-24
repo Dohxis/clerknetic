@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Component\Traits;
 
-use Arpite\Component\ButtonTemplate;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\ButtonTemplate;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 trait HasButtons
 {

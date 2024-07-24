@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Authentication\Actions;
 
-use Arpite\Authentication\Exceptions\HomepageNotFoundException;
+use App\Domains\Framework\Authentication\Exceptions\HomepageNotFoundException;
 
 class GetHomepageUrlAction
 {

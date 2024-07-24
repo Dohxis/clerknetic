@@ -2,13 +2,13 @@
 
 namespace App\Domains\Framework\Component\Components\Card;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Card\Enums\CardDesignEnum;
-use Arpite\Component\Traits\HasButtons;
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Component\Traits\HasImage;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Card\Enums\CardDesignEnum;
+use App\Domains\Framework\Component\Traits\HasButtons;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Component\Traits\HasImage;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Card extends Component
 {

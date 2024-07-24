@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Form\Fields\Traits;
 
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 trait HasMinAndMax
 {

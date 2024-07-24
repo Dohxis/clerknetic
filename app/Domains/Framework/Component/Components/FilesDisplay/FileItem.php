@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Component\Components\FilesDisplay;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class FileItem extends Component
 {

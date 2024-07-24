@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Component\Components\Wizard;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Wizard\Enums\WizardHeaderDesign;
-use Arpite\Component\Components\Wizard\Partials\WizardStep;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Wizard\Enums\WizardHeaderDesign;
+use App\Domains\Framework\Component\Components\Wizard\Partials\WizardStep;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class WizardHeader extends Component
 {

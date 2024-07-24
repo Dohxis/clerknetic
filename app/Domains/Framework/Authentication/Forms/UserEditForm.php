@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Authentication\Forms;
 
-use Arpite\Authentication\Actions\CreateOrUpdateUserAction;
-use Arpite\Authentication\Factories\UserFormFactory;
-use Arpite\Core\Utilities\Notification;
-use Arpite\Form\Form;
-use Arpite\Form\ProcessableForm;
+use App\Domains\Framework\Authentication\Actions\CreateOrUpdateUserAction;
+use App\Domains\Framework\Authentication\Factories\UserFormFactory;
+use App\Domains\Framework\Core\Utilities\Notification;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\ProcessableForm;
 use Domain\Team\Models\User;
 
 class UserEditForm extends ProcessableForm

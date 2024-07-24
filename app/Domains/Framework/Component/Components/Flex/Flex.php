@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Component\Components\Flex;
 
-use Arpite\Component\Component;
-use Arpite\Component\Components\Flex\Enums\Display;
-use Arpite\Component\ResponsiveValue;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Components\Flex\Enums\Display;
+use App\Domains\Framework\Component\ResponsiveValue;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class Flex extends Component
 {

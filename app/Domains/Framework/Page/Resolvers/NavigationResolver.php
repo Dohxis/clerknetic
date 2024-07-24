@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Page\Resolvers;
 
-use Arpite\Page\Objects\NavigationItem;
+use App\Domains\Framework\Page\Objects\NavigationItem;
 
 class NavigationResolver
 {

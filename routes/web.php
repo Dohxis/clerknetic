@@ -7,7 +7,7 @@ require __DIR__ . "/auth.php";
 
 Route::get("/", function () {
     if (Auth::check()) {
-        return redirect("/acme/dashboard");
+        return redirect("/acme/workflows");
     }
 
     return redirect("/sign-in");

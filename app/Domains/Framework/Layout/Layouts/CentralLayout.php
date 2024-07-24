@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Layout\Layouts;
 
-use Arpite\Component\Components\Text;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Layout\Layout;
+use App\Domains\Framework\Component\Components\Text;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Layout\Layout;
 
 class CentralLayout extends Layout
 {

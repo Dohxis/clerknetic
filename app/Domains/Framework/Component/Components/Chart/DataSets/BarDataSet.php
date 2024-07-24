@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Component\Components\Chart\DataSets;
 
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class BarDataSet extends DataSet
 {

@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Component\Traits;
 
-use Arpite\Component\Enums\ButtonColor;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Enums\ButtonColor;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 trait HasButtonColor
 {

@@ -3,7 +3,7 @@
 namespace App\Domains\Framework\ResourceFieldConfiguration;
 
 use Illuminate\Support\Collection;
-use Arpite\Resource\Enums\ResourcePageType;
+use App\Domains\Framework\Resource\Enums\ResourcePageType;
 
 class ResourceFieldConfiguration
 {

@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Component\Components\Table;
 
-use Arpite\Component\Component;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class TableRow extends Component
 {

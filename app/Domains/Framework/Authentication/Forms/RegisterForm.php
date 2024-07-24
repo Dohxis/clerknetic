@@ -2,12 +2,12 @@
 
 namespace App\Domains\Framework\Authentication\Forms;
 
-use Arpite\Authentication\Actions\CreateOrUpdateUserAction;
-use Arpite\Authentication\Actions\GetHomepageUrlAction;
-use Arpite\Authentication\Factories\UserFormFactory;
-use Arpite\Form\Form;
-use Arpite\Form\Form\FormButton;
-use Arpite\Form\ProcessableForm;
+use App\Domains\Framework\Authentication\Actions\CreateOrUpdateUserAction;
+use App\Domains\Framework\Authentication\Actions\GetHomepageUrlAction;
+use App\Domains\Framework\Authentication\Factories\UserFormFactory;
+use App\Domains\Framework\Form\Form;
+use App\Domains\Framework\Form\Form\FormButton;
+use App\Domains\Framework\Form\ProcessableForm;
 use Domain\Team\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;

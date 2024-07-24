@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Form\Fields;
 
-use Arpite\Component\Traits\HasDescription;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Traits\HasDescription;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Illuminate\Validation\Rule;
 
 /**

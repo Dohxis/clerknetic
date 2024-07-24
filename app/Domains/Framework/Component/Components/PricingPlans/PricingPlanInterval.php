@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components\PricingPlans;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasButtons;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasButtons;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class PricingPlanInterval extends Component
 {

@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\ResourceFieldConfiguration\Traits;
 
-use Arpite\ResourceFieldConfiguration\ResourceFieldConfiguration;
-use Arpite\Resource\Enums\ResourcePageType;
+use App\Domains\Framework\ResourceFieldConfiguration\ResourceFieldConfiguration;
+use App\Domains\Framework\Resource\Enums\ResourcePageType;
 
 trait HasResourceConfigurations
 {

@@ -2,22 +2,22 @@
 
 namespace App\Domains\Framework\Page;
 
-use Arpite\Component\Component;
-use Arpite\Core\Traits\HasRegisterRoutes;
-use Arpite\Core\Traits\HasResolveHelpers;
-use Arpite\Core\Utilities\ExportBuilder;
-use Arpite\Core\Utilities\RouteUtility;
-use Arpite\Form\Operation;
-use Arpite\Layout\Layout;
-use Arpite\Layout\Layouts\TopSideLayout;
-use Arpite\Page\Resolvers\LayoutResolver;
-use Arpite\Page\Resolvers\NavigationResolver;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Core\Traits\HasRegisterRoutes;
+use App\Domains\Framework\Core\Traits\HasResolveHelpers;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\RouteUtility;
+use App\Domains\Framework\Form\Operation;
+use App\Domains\Framework\Layout\Layout;
+use App\Domains\Framework\Layout\Layouts\TopSideLayout;
+use App\Domains\Framework\Page\Resolvers\LayoutResolver;
+use App\Domains\Framework\Page\Resolvers\NavigationResolver;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 use Inertia\Response;
-use Arpite\Responses\StructuredPageResponse;
+use App\Domains\Framework\Responses\StructuredPageResponse;
 
 abstract class Page extends Controller
 {

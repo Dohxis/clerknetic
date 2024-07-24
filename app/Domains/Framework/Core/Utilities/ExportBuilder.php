@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Core\Utilities;
 
-use Arpite\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Interfaces\Exportable;
 
 class ExportBuilder
 {

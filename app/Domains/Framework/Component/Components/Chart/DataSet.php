@@ -2,8 +2,8 @@
 
 namespace App\Domains\Framework\Component\Components\Chart;
 
-use Arpite\Core\Interfaces\Exportable;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Interfaces\Exportable;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 /**
  * @deprecated Use BarDataSet instead.

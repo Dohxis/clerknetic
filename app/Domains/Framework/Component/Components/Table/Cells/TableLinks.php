@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components\Table\Cells;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasNodes;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasNodes;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class TableLinks extends Component
 {

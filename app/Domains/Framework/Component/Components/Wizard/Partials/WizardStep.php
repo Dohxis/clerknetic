@@ -3,9 +3,9 @@
 namespace App\Domains\Framework\Component\Components\Wizard\Partials;
 
 use Closure;
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class WizardStep extends Component
 {

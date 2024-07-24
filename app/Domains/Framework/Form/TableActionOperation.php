@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Form;
 
-use Arpite\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
+use App\Domains\Framework\Component\Components\Table\Actions\GetTableSelectedValuesValidationRulesAction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;

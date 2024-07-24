@@ -2,9 +2,9 @@
 
 namespace App\Domains\Framework\Component\Components\Link;
 
-use Arpite\Component\ButtonTemplate;
-use Arpite\Component\Traits\HasTextAlign;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\ButtonTemplate;
+use App\Domains\Framework\Component\Traits\HasTextAlign;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use Exception;
 
 class Link extends ButtonTemplate

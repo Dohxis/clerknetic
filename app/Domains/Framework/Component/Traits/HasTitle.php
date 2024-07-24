@@ -2,7 +2,7 @@
 
 namespace App\Domains\Framework\Component\Traits;
 
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 trait HasTitle
 {

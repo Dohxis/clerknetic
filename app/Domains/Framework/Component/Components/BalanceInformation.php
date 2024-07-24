@@ -2,10 +2,10 @@
 
 namespace App\Domains\Framework\Component\Components;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasActions;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasActions;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class BalanceInformation extends Component
 {

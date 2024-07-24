@@ -2,11 +2,11 @@
 
 namespace App\Domains\Framework\Form\Form;
 
-use Arpite\Component\Component;
-use Arpite\Component\Traits\HasButtonColor;
-use Arpite\Component\Traits\HasButtonDesign;
-use Arpite\Component\Traits\HasTitle;
-use Arpite\Core\Utilities\ExportBuilder;
+use App\Domains\Framework\Component\Component;
+use App\Domains\Framework\Component\Traits\HasButtonColor;
+use App\Domains\Framework\Component\Traits\HasButtonDesign;
+use App\Domains\Framework\Component\Traits\HasTitle;
+use App\Domains\Framework\Core\Utilities\ExportBuilder;
 
 class FormButton extends Component
 {
