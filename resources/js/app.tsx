@@ -1,11 +1,13 @@
 import "./bootstrap";
-import "../css/app.css";
+import "../css/index.css";
 
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
-const appName = import.meta.env.VITE_APP_NAME || "Laravel";
+// import "./i18n";
+
+const appName = import.meta.env.VITE_APP_NAME || "Clerknetic";
 
 createInertiaApp({
 	title: (title) => `${title} - ${appName}`,

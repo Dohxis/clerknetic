@@ -40,7 +40,7 @@ const sidebarItems = [
 	},
 ];
 
-const SidebarItem = ({ icon, text }) => (
+const SidebarItem = ({ icon, text }: any) => (
 	<li>
 		<a
 			href="#"
@@ -64,7 +64,7 @@ const SidebarItem = ({ icon, text }) => (
 	</li>
 );
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen }: any) => {
 	return (
 		<div
 			className={`bg-gray-50 text-gray-800 h-screen w-72 fixed top-0 left-0 transition-transform duration-300 ease-in-out ${

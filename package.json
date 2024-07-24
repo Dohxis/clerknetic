@@ -4,10 +4,11 @@
 	"scripts": {
 		"start": "vite",
 		"build": "tsc && vite build && vite build --ssr",
-		"format": "prettier package.json \"resources/**/*.{ts,tsx}\" \"app/**/*.php\" \"routes/**/*.php\" --write"
+		"format": "prettier package.json \"resources/**/*.{ts,tsx}\" \"app/**/*.php\" \"routes/**/*.php\" --write",
+		"translate": "i18next-scanner --config i18next-scanner.config.js"
 	},
 	"devDependencies": {
-		"@headlessui/react": "^2.0.0",
+		"@inertiajs/core": "^1.0.0",
 		"@inertiajs/react": "^1.0.0",
 		"@prettier/plugin-php": "^0.22.2",
 		"@tailwindcss/forms": "^0.5.3",
@@ -17,6 +18,7 @@
 		"@vitejs/plugin-react": "^4.2.0",
 		"autoprefixer": "^10.4.12",
 		"axios": "^1.6.4",
+		"i18next-scanner": "^3.1.0",
 		"laravel-vite-plugin": "^1.0",
 		"postcss": "^8.4.31",
 		"prettier": "^3.3.3",
@@ -24,10 +26,19 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tailwindcss": "^3.2.1",
+		"tippy.js": "^6.3.7",
 		"typescript": "^5.0.2",
 		"vite": "^5.0"
 	},
 	"dependencies": {
-		"@heroicons/react": "^2.1.5"
+		"@headlessui/react": "^1.6.5",
+		"@heroicons/react": "^2.1.5",
+		"@mdi/js": "^6.5.95",
+		"@tippyjs/react": "^4.2.6",
+		"chart.js": "^3.7.0",
+		"i18next": "^23.12.2",
+		"react-chartjs-2": "^4.0.1",
+		"react-i18next": "^15.0.0",
+		"react-number-format": "^4.8.0"
 	}
 }
