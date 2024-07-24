@@ -1,6 +1,5 @@
-import { usePage } from "@inertiajs/react";
-import React, { useEffect } from "react";
-import { PagePropsType } from "../../Interfaces/PagePropsType";
+import { Head } from "@inertiajs/react";
+import React from "react";
 import { Notifications } from "../Notifications/Notifications";
 import { LayoutCommonInterface } from "./LayoutCommonInterface";
 
@@ -8,13 +7,11 @@ export const Layout: React.FC<LayoutCommonInterface> = ({
 	title,
 	children,
 }) => {
-	const { applicationName } = usePage<PagePropsType>().props;
+	return (
+		<>
+			<Head title={title} />
 
-	useEffect(() => {
-		if (title !== null) {
-			document.title = `${title} - ${applicationName}`;
-		}
-	}, [title]);
-
-	return <Notifications>{children}</Notifications>;
+			<Notifications>{children}</Notifications>
+		</>
+	);
 };

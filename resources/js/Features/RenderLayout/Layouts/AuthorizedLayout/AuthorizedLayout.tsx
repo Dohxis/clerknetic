@@ -9,11 +9,11 @@ import { useMobileLayout } from "../../../../hooks/useMobileLayout";
 import { Transition } from "@headlessui/react";
 import { useIsLG } from "../../../../hooks/useIsLG";
 
-export interface LeftSideLayoutInterface extends LayoutCommonInterface {
-	nodeType: "LeftSideLayout";
+export interface AuthorizedLayoutInterface extends LayoutCommonInterface {
+	nodeType: "AuthorizedLayout";
 }
 
-export const LeftSideLayout: React.FC<LeftSideLayoutInterface> = ({
+export const AuthorizedLayout: React.FC<AuthorizedLayoutInterface> = ({
 	title,
 	navigation,
 	userNavigation,
@@ -24,15 +24,15 @@ export const LeftSideLayout: React.FC<LeftSideLayoutInterface> = ({
 	const { isMobileLayout } = useMobileLayout();
 	const { isLG } = useIsLG();
 	const [sidebarOpen, setSidebarOpen] = useState(
-		isMobileLayout ? false : localStorage.getItem("sidebar-open") !== "0"
+		isMobileLayout ? false : localStorage.getItem("sidebar-open") !== "0",
 	);
 
 	const tabsDesign =
 		tabs.length === 0
 			? null
 			: isLG
-			? givenTabsDesign
-			: TabsMenuDesign.REGULAR;
+				? givenTabsDesign
+				: TabsMenuDesign.REGULAR;
 
 	const sidebarWidthClassName = "w-72";
 	const sidebarClosedMarginClassName = "-ml-72";
@@ -53,7 +53,7 @@ export const LeftSideLayout: React.FC<LeftSideLayoutInterface> = ({
 		setSidebarOpen(
 			isMobileLayout
 				? false
-				: localStorage.getItem("sidebar-open") !== "0"
+				: localStorage.getItem("sidebar-open") !== "0",
 		);
 		toggleScrollbars(true);
 	}, [isMobileLayout]);

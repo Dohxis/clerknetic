@@ -1,10 +1,8 @@
 import React, { PropsWithChildren } from "react";
 import { Layout } from "./Layout";
 import { LayoutCommonInterface } from "./LayoutCommonInterface";
-import { CentralLayout } from "./Layouts/CentralLayout/CentralLayout";
 import { LayoutType } from "./Layouts/LayoutType";
-import { LeftSideLayout } from "./Layouts/LeftSideLayout/LeftSideLayout";
-import { TopSideLayout } from "./Layouts/TopSideLayout/TopSideLayout";
+import { AuthorizedLayout } from "./Layouts/AuthorizedLayout/AuthorizedLayout";
 import { UnauthorizedLayout } from "./Layouts/UnauthorizedLayout/UnauthorizedLayout";
 
 interface RenderLayoutInterface extends PropsWithChildren {
@@ -18,9 +16,7 @@ export const RenderLayout: React.FC<RenderLayoutInterface> = ({
 	children,
 }) => {
 	const LayoutComponent = {
-		CentralLayout: CentralLayout,
-		TopSideLayout: TopSideLayout,
-		LeftSideLayout: LeftSideLayout,
+		AuthorizedLayout: AuthorizedLayout,
 		UnauthorizedLayout: UnauthorizedLayout,
 	}[layout.nodeType];
 
@@ -36,5 +32,6 @@ export const RenderLayout: React.FC<RenderLayoutInterface> = ({
 	}
 
 	console.warn(`Layout "${layout.nodeType}" was not found!`);
+
 	return null;
 };

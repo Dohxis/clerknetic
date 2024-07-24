@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Domains\Framework\Layout\Layouts\LeftSideLayout;
+use App\Domains\Framework\Layout\Layouts\AuthorizedLayout\AuthorizedLayout;
 use App\Domains\Framework\Page\Objects\NavigationItem;
 use App\Domains\Framework\Page\Resolvers\LayoutResolver;
 use App\Domains\Framework\Page\Resolvers\NavigationResolver;
@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
 
-        $this->app->singleton(LayoutResolver::class, fn() => LeftSideLayout::make());
+        $this->app->singleton(LayoutResolver::class, fn() => AuthorizedLayout::make());
 
         $this->app->singleton(NavigationResolver::class, fn() => new NavigationResolver([
             NavigationItem::make("/acme/workflows", "Workflows"),

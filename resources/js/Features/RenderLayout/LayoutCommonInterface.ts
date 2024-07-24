@@ -1,10 +1,16 @@
 import { PropsWithChildren } from "react";
 import { TabsMenuDesignType } from "./Features/Tabs/Enums/TabDesign";
 import { UserNavigationItemInterface } from "./Features/UserNavigation";
-import { NavigationItemInterface } from "./Layouts/TopSideLayout/partials/Navigation";
+
+export interface NavigationItemInterface {
+	activeMatch: string;
+	route: string;
+	title: string | null;
+	icon: string | null;
+}
 
 export interface LayoutCommonInterface extends PropsWithChildren {
-	title: string | null;
+	title: string | undefined;
 	navigation: NavigationItemInterface[];
 	userNavigation: UserNavigationItemInterface[];
 	tabs: TabsMenuItemInterface[];

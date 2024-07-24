@@ -1,10 +1,6 @@
-import { CentralLayoutInterface } from "./CentralLayout/CentralLayout";
-import { LeftSideLayoutInterface } from "./LeftSideLayout/LeftSideLayout";
-import { TopSideLayoutInterface } from "./TopSideLayout/TopSideLayout";
+import { AuthorizedLayoutInterface } from "./AuthorizedLayout/AuthorizedLayout";
 import { UnauthorizedLayoutInterface } from "./UnauthorizedLayout/UnauthorizedLayout";
 
 export type LayoutType =
-	| CentralLayoutInterface
-	| TopSideLayoutInterface
-	| LeftSideLayoutInterface
+	| AuthorizedLayoutInterface
 	| UnauthorizedLayoutInterface;
