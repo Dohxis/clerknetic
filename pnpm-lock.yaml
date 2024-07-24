@@ -61,9 +61,6 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.12
     version: 10.4.19(postcss@8.4.39)
-  axios:
-    specifier: ^1.6.4
-    version: 1.7.2
   i18next-scanner:
     specifier: ^3.1.0
     version: 3.3.0

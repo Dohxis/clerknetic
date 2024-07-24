@@ -1,11 +1,10 @@
-import "./bootstrap";
 import "../css/index.css";
 
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
-// import "./i18n";
+import "./i18n";
 
 const appName = import.meta.env.VITE_APP_NAME || "Clerknetic";
 
@@ -19,6 +18,7 @@ createInertiaApp({
 	setup({ el, App, props }) {
 		if (import.meta.env.DEV) {
 			createRoot(el).render(<App {...props} />);
+
 			return;
 		}
 
