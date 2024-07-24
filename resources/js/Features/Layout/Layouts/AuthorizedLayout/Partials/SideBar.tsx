@@ -1,12 +1,13 @@
 import { Link, usePage } from "@inertiajs/react";
 import React from "react";
-import { NavigationItem } from "./NavigationItem";
-import { LayoutCommonInterface } from "../../../LayoutCommonInterface";
 import { PagePropsType } from "../../../../../Interfaces/PagePropsType";
 import { useTranslation } from "react-i18next";
 import { Logo } from "../../../../Logo";
+import { LayoutPropertiesInterface } from "@/Features/Layout/Layout";
+import { NavigationItem } from "@/Features/Layout/Layouts/AuthorizedLayout/Partials/NavigationItem";
 
-interface SideBarInterface extends Pick<LayoutCommonInterface, "navigation"> {
+interface SideBarInterface
+	extends Pick<LayoutPropertiesInterface, "navigation"> {
 	open: boolean;
 	isMobileLayout: boolean;
 	sideBarWidthClassName: string;

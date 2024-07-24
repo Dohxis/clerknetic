@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 use App\Domains\Core\Middlewares\HandleInertiaRequestsMiddleware;
 use App\Domains\Workflow\Pages\WorkflowsPage\WorkflowsPage;
 use App\Http\Controllers\ProfileController;

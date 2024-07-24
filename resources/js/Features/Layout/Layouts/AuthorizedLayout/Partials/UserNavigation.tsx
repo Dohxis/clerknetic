@@ -3,8 +3,8 @@ import { Link, router, usePage } from "@inertiajs/react";
 import { mdiAccountCircle } from "@mdi/js";
 import React, { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import { PagePropsType } from "../../../Interfaces/PagePropsType";
-import { Icon } from "../../Icon";
+import { PagePropsType } from "../../../../../Interfaces/PagePropsType";
+import { Icon } from "../../../../Icon";
 
 export interface UserNavigationItemInterface {
 	title: string | null;

@@ -1,7 +1,7 @@
+import { Icon } from "@/Features/Icon";
+import { TabsMenuItemInterface } from "@/Features/Layout/Layout";
+import { Link } from "@/Features/Link";
 import React from "react";
-import { Icon } from "../../../Icon";
-import { Link } from "../../../Link";
-import { TabsMenuItemInterface } from "../../LayoutCommonInterface";
 
 interface SideTabsMenuInterface {
 	tabs: TabsMenuItemInterface[];

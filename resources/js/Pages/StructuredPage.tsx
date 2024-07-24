@@ -1,7 +1,5 @@
 import React, { ReactElement } from "react";
-import { LayoutCommonInterface } from "../Features/RenderLayout/LayoutCommonInterface";
-import { LayoutType } from "../Features/RenderLayout/Layouts/LayoutType";
-import { RenderLayout } from "../Features/RenderLayout/RenderLayout";
+import { Layout, LayoutInterface } from "../Features/Layout/Layout";
 import { RenderNodes } from "../Features/RenderNode/RenderNodes";
 import { PagePropsType } from "../Interfaces/PagePropsType";
 import { usePage } from "@inertiajs/react";
@@ -14,19 +12,13 @@ const StructuredPage: React.FC = () => {
 	return <RenderNodes nodes={nodes} />;
 };
 
-// eslint-disable-next-line
-(StructuredPage as any).layout = (
-	page: ReactElement<{
-		layout: LayoutType;
-		layoutProperties: LayoutCommonInterface;
-	}>,
-) => {
+(StructuredPage as any).layout = (page: ReactElement<LayoutInterface>) => {
 	const { layout, layoutProperties } = page.props;
 
 	return (
-		<RenderLayout layout={layout} commonProperties={layoutProperties}>
+		<Layout layout={layout} layoutProperties={layoutProperties}>
 			{page}
-		</RenderLayout>
+		</Layout>
 	);
 };
 

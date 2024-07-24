@@ -1,25 +1,26 @@
 import { Link, usePage } from "@inertiajs/react";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { useTranslation } from "react-i18next";
 import { PagePropsType } from "../../../../Interfaces/PagePropsType";
 import { Logo } from "../../../Logo";
 import { NodeType } from "../../../RenderNode/NodeType";
 import { RenderNode } from "../../../RenderNode/RenderNode";
-import { LayoutCommonInterface } from "../../LayoutCommonInterface";
+import { LayoutPropertiesInterface } from "@/Features/Layout/Layout";
 
-export interface UnauthorizedLayoutInterface extends LayoutCommonInterface {
+export interface UnauthorizedLayoutInterface {
 	nodeType: "UnauthorizedLayout";
-	subtitle: NodeType | null;
+}
+
+export interface UnauthorizedLayoutComponentInterface
+	extends LayoutPropertiesInterface,
+		PropsWithChildren {
+	subTitle: NodeType | null;
 	width: "lg" | "2xl";
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export const UnauthorizedLayout: React.FC<UnauthorizedLayoutInterface> = ({
-	title,
-	subtitle,
-	width,
-	children,
-}) => {
+export const UnauthorizedLayout: React.FunctionComponent<
+	UnauthorizedLayoutComponentInterface
+> = ({ title, subTitle, width, children }) => {
 	const { t } = useTranslation();
 
 	const { applicationName } = usePage<PagePropsType>().props;
@@ -49,9 +50,9 @@ export const UnauthorizedLayout: React.FC<UnauthorizedLayoutInterface> = ({
 							</h2>
 						)}
 
-						{subtitle !== null && (
+						{subTitle !== null && (
 							<p className="text-sm text-gray-600">
-								<RenderNode {...(subtitle as any)} />
+								<RenderNode {...(subTitle as any)} />
 							</p>
 						)}
 					</div>

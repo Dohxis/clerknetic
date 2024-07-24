@@ -1,6 +1,6 @@
+import { TabsMenuItemInterface } from "@/Features/Layout/Layout";
+import { Link } from "@/Features/Link";
 import React from "react";
-import { Link } from "../../../Link";
-import { TabsMenuItemInterface } from "../../LayoutCommonInterface";
 
 interface RegularTabsMenuInterface {
 	tabs: TabsMenuItemInterface[];

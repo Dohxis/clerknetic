@@ -1,19 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { LayoutCommonInterface } from "../../LayoutCommonInterface";
-import { UserNavigation } from "../../Features/UserNavigation";
-import { SideBar } from "./partials/SideBar";
-import { TabsMenuDesign } from "../../Features/Tabs/Enums/TabDesign";
-import { RegularTabsMenu } from "../../Features/Tabs/RegularTabsMenu";
-import { SideTabsMenu } from "../../Features/Tabs/SideTabsMenu";
+import React, { PropsWithChildren, useEffect, useState } from "react";
+import { UserNavigation } from "./Partials/UserNavigation";
+import { SideBar } from "./Partials/SideBar";
+import { TabsMenuDesign } from "./Enums/TabDesign";
+import { RegularTabsMenu } from "./Partials/RegularTabsMenu";
+import { SideTabsMenu } from "./Partials/SideTabsMenu";
 import { useMobileLayout } from "../../../../hooks/useMobileLayout";
 import { Transition } from "@headlessui/react";
 import { useIsLG } from "../../../../hooks/useIsLG";
+import { LayoutPropertiesInterface } from "@/Features/Layout/Layout";
 
-export interface AuthorizedLayoutInterface extends LayoutCommonInterface {
+export interface AuthorizedLayoutInterface {
 	nodeType: "AuthorizedLayout";
 }
 
-export const AuthorizedLayout: React.FC<AuthorizedLayoutInterface> = ({
+export interface AuthorizedLayoutComponentInterface
+	extends LayoutPropertiesInterface,
+		PropsWithChildren {}
+
+export const AuthorizedLayout: React.FunctionComponent<
+	AuthorizedLayoutComponentInterface
+> = ({
 	title,
 	navigation,
 	userNavigation,
