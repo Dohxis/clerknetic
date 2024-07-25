@@ -1,7 +1,7 @@
 import React from "react";
-import { nl2br } from "../../../helpers/nl2br";
 import { NodeType } from "../NodeType";
 import { RenderNode } from "../RenderNode";
+import { nl2br } from "~/Utilities/TextUtility";
 
 export interface TextInterface {
 	nodeType: "Text";

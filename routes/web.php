@@ -7,8 +7,8 @@ use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(["guest"])->group(function () {
-    SignInPage::register();
-    SignUpPage::register();
+	SignInPage::register();
+	SignUpPage::register();
 });
 
 LogoutOperation::register();

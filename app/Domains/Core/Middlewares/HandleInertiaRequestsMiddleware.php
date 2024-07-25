@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Inertia\Middleware;
-use Tighten\Ziggy\Ziggy;
 
 class HandleInertiaRequestsMiddleware extends Middleware
 {
@@ -39,10 +38,6 @@ class HandleInertiaRequestsMiddleware extends Middleware
 			"balance" => null,
 			"auth" => [
 				"user" => $request->user(),
-			],
-			"ziggy" => fn() => [
-				...(new Ziggy())->toArray(),
-				"location" => $request->url(),
 			],
 		];
 	}

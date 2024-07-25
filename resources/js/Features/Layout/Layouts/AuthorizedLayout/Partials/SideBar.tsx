@@ -3,8 +3,8 @@ import React from "react";
 import { PagePropsType } from "../../../../../Interfaces/PagePropsType";
 import { useTranslation } from "react-i18next";
 import { Logo } from "../../../../Logo";
-import { LayoutPropertiesInterface } from "@/Features/Layout/Layout";
-import { NavigationItem } from "@/Features/Layout/Layouts/AuthorizedLayout/Partials/NavigationItem";
+import { LayoutPropertiesInterface } from "~/Features/Layout/Layout";
+import { NavigationItem } from "~/Features/Layout/Layouts/AuthorizedLayout/Partials/NavigationItem";
 
 interface SideBarInterface
 	extends Pick<LayoutPropertiesInterface, "navigation"> {

@@ -1,5 +1,5 @@
-import { TabsMenuItemInterface } from "@/Features/Layout/Layout";
-import { Link } from "@/Features/Link";
+import { TabsMenuItemInterface } from "~/Features/Layout/Layout";
+import { Link } from "~/Features/Link";
 import React from "react";
 
 interface RegularTabsMenuInterface {

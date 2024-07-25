@@ -7,8 +7,8 @@ import React, {
 	useRef,
 	useState,
 } from "react";
-import { randomString } from "../../../../helpers/randomString";
-import { ResponseSuccessType, useFetch } from "../../../../hooks/useFetch";
+import { randomString } from "../../../../Utilities/TextUtility";
+import { ResponseSuccessType, useFetch } from "../../../../Hooks/useFetch";
 import {
 	PagePropsInterface,
 	PagePropsType,

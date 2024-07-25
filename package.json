@@ -3,7 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "vite",
-		"build": "tsc && vite build && vite build --ssr",
+		"build": "tsc && vite build",
 		"format": "prettier package.json \"resources/**/*.{ts,tsx}\" \"app/**/*.php\" \"routes/**/*.php\" --write",
 		"translate": "i18next-scanner --config i18next-scanner.config.js"
 	},

@@ -11,7 +11,6 @@
         <link href="https://fonts.bunny.net/css?family=inter:300,400,500&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @routes
         @viteReactRefresh
         @vite(['resources/js/index.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead

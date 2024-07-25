@@ -7,9 +7,9 @@ import {
 	UnauthorizedLayout,
 	UnauthorizedLayoutInterface,
 } from "./Layouts/UnauthorizedLayout/UnauthorizedLayout";
-import { Notifications } from "@/Features/Notifications/Notifications";
+import { Notifications } from "~/Features/Notifications/Notifications";
 import { Head } from "@inertiajs/react";
-import { TabDesignType } from "@/Features/RenderNode/Nodes/Tabs/Enums/TabDesign";
+import { TabDesignType } from "~/Features/RenderNode/Nodes/Tabs/Enums/TabDesign";
 
 export interface NavigationItemInterface {
 	title: string | null;

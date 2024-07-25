@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import NumberFormat, { NumberFormatValues } from "react-number-format";
-import { randomString } from "../../helpers/randomString";
+import { randomString } from "../../Utilities/TextUtility";
 import { FieldInterface } from "./FieldsInterfaces";
 import { hasError } from "./helpers/hasError";
 import { FieldError } from "./partials/FieldError";

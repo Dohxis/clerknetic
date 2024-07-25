@@ -4,10 +4,10 @@ import { SideBar } from "./Partials/SideBar";
 import { TabsMenuDesign } from "./Enums/TabDesign";
 import { RegularTabsMenu } from "./Partials/RegularTabsMenu";
 import { SideTabsMenu } from "./Partials/SideTabsMenu";
-import { useMobileLayout } from "../../../../hooks/useMobileLayout";
+import { useMobileLayout } from "../../../../Hooks/useMobileLayout";
 import { Transition } from "@headlessui/react";
-import { useIsLG } from "../../../../hooks/useIsLG";
-import { LayoutPropertiesInterface } from "@/Features/Layout/Layout";
+import { useIsLG } from "../../../../Hooks/useIsLG";
+import { LayoutPropertiesInterface } from "~/Features/Layout/Layout";
 
 export interface AuthorizedLayoutInterface {
 	nodeType: "AuthorizedLayout";

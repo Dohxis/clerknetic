@@ -1,6 +1,6 @@
 import { usePage } from "@inertiajs/react";
 import React, { PropsWithChildren, useEffect, useState } from "react";
-import { randomString } from "../../helpers/randomString";
+import { randomString } from "../../Utilities/TextUtility";
 import { PagePropsType } from "../../Interfaces/PagePropsType";
 import NotificationsContext from "./NotificationsContext";
 import { Notification, NotificationInterface } from "./partials/Notification";

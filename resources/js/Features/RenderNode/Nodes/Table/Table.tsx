@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useCheckboxes } from "../../../../hooks/useCheckboxes";
+import { useCheckboxes } from "../../../../Hooks/useCheckboxes";
 import { NoResultsFound } from "../../../NoResultsFound";
 import { NodeType } from "../../NodeType";
 import PanelContext from "../../../Panel/PanelContext";

@@ -1,6 +1,6 @@
-import { Icon } from "@/Features/Icon";
-import { TabsMenuItemInterface } from "@/Features/Layout/Layout";
-import { Link } from "@/Features/Link";
+import { Icon } from "~/Features/Icon";
+import { TabsMenuItemInterface } from "~/Features/Layout/Layout";
+import { Link } from "~/Features/Link";
 import React from "react";
 
 interface SideTabsMenuInterface {

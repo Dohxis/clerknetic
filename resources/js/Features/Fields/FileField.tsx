@@ -1,7 +1,7 @@
 import { mdiClose } from "@mdi/js";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { randomString } from "../../helpers/randomString";
+import { randomString } from "../../Utilities/TextUtility";
 import { Icon } from "../Icon";
 import { FieldInterface } from "./FieldsInterfaces";
 import { hasError } from "./helpers/hasError";

@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { randomString } from "../../../../helpers/randomString";
+import { randomString } from "../../../../Utilities/TextUtility";
 import { Button, ButtonInterface } from "../../../Button";
 import FormContext from "./FormContext";
 

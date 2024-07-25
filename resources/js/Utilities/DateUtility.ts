@@ -18,13 +18,6 @@ export const formatTime = (givenDate: Date | string) => {
 	return twoDigits(date.getHours()) + ":" + twoDigits(date.getMinutes());
 };
 
-export const formatDateTime = (givenDate: Date | string) => {
-	const date =
-		typeof givenDate === "string" ? new Date(givenDate) : givenDate;
-
-	return formatDate(date) + " " + formatTime(date);
-};
-
 const twoDigits = (digit: number) => {
 	if (0 <= digit && digit < 10) {
 		return "0" + digit.toString();

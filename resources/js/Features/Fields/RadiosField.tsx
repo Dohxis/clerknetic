@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { randomString } from "../../helpers/randomString";
+import { randomString } from "../../Utilities/TextUtility";
 import { FieldInterface } from "./FieldsInterfaces";
 import { hasError } from "./helpers/hasError";
 import { ChoiceButton } from "./partials/ChoiceButton";

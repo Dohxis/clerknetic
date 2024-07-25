@@ -1,6 +1,6 @@
 import { mdiPlus, mdiTrashCanOutline } from "@mdi/js";
 import React, { useContext, useRef } from "react";
-import { randomString } from "../../../../../helpers/randomString";
+import { randomString } from "../../../../../Utilities/TextUtility";
 import { FieldInterface } from "../../../../Fields/FieldsInterfaces";
 import { FieldError } from "../../../../Fields/partials/FieldError";
 import { FieldLabel } from "../../../../Fields/partials/FieldLabel";

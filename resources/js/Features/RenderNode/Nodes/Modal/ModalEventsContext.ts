@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponseSuccessType } from "../../../../hooks/useFetch";
+import { ResponseSuccessType } from "../../../../Hooks/useFetch";
 
 interface ModalEventsContextInterface {
 	onSubmitSuccess:

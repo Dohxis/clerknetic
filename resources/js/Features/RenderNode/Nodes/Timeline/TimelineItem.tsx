@@ -1,5 +1,5 @@
 import React from "react";
-import { formatDate, formatTime } from "../../../../helpers/formatDate";
+import { formatDate, formatTime } from "../../../../Utilities/DateUtility";
 
 export interface TimelineItemInterface {
 	nodeType: "TimelineItem";
