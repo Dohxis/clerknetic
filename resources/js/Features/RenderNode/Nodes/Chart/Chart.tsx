@@ -76,7 +76,7 @@ export const Chart: React.FC<ChartInterface> = ({
 									const value =
 										dataType === "CURRENCY"
 											? context.parsed.y.toFixed(2) +
-											  " EUR"
+												" EUR"
 											: context.parsed.y;
 
 									return `${label}: ${value}`;

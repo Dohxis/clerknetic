@@ -41,8 +41,8 @@ export const FileField: React.FC<FileFieldInterface> = ({
 		value.length === 0
 			? null
 			: value[0] instanceof File
-			? value[0].name
-			: value[0].title; // Currently we only support 1 file
+				? value[0].name
+				: value[0].title; // Currently we only support 1 file
 
 	const showClearButton = !required && !disabled && filename !== null;
 

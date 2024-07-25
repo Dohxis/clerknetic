@@ -8,7 +8,7 @@ use Stancl\Tenancy\Database\Concerns\HasDatabase;
 use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
 
 /**
- * 
+ *
  *
  * @property string $id
  * @property array|null $data

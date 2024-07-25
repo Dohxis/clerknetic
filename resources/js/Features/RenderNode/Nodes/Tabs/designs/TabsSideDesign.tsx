@@ -48,7 +48,7 @@ export const TabsSideDesign: React.FC<TabsDesignInterface> = ({
 								</div>
 							)}
 						</Link>
-					)
+					),
 				)}
 			</div>
 

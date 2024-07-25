@@ -4,7 +4,7 @@ import { ResponsiveValueInterface } from "../RenderNodeInterface";
 export const generateResponsiveVariable = <T>(
 	baseName: string,
 	responsiveValue: ResponsiveValueInterface<T> | null,
-	transform?: (value: T) => string | number
+	transform?: (value: T) => string | number,
 ) => {
 	if (responsiveValue === null) {
 		return {};
@@ -18,6 +18,6 @@ export const generateResponsiveVariable = <T>(
 					transform === undefined ? value : transform(value),
 			};
 		},
-		{}
+		{},
 	) as React.CSSProperties;
 };

@@ -81,7 +81,7 @@ export const Table: React.FC<TableInterface> = ({
 				<ButtonActions>
 					<RenderNodes nodes={actionButtons} />
 				</ButtonActions>
-			</div>
+			</div>,
 		);
 	}, [checkedValues]);
 
@@ -91,8 +91,8 @@ export const Table: React.FC<TableInterface> = ({
 		setMaxNumberOfColumns(
 			rows.reduce(
 				(previous, row) => Math.max(row.values.length, previous),
-				0
-			)
+				0,
+			),
 		);
 	}, [rows]);
 
@@ -158,8 +158,8 @@ export const Table: React.FC<TableInterface> = ({
 									isChecked(row.id)
 										? "bg-primary-50 bg-opacity-80"
 										: asPairTable && rowIndex % 2 !== 0
-										? "bg-gray-50"
-										: "bg-white"
+											? "bg-gray-50"
+											: "bg-white"
 								}`}
 							>
 								{showCheckboxes && (

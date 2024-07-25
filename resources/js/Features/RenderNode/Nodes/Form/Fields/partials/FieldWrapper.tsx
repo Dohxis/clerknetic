@@ -29,7 +29,7 @@ export const FieldWrapper: React.FC<FieldWrapperInterface> = ({
 
 	const getActiveDependees = (value: unknown) =>
 		dependees.filter(
-			(dependantNodesRule) => dependantNodesRule.value === value
+			(dependantNodesRule) => dependantNodesRule.value === value,
 		);
 
 	return (
@@ -51,7 +51,7 @@ export const FieldWrapper: React.FC<FieldWrapperInterface> = ({
 							 */
 							getActiveDependees(fieldValue).map((dependee) => {
 								Object.entries(
-									dependee.fieldsDefaultValues
+									dependee.fieldsDefaultValues,
 								).forEach(([name]) => {
 									delete newData[name];
 								});
@@ -62,7 +62,7 @@ export const FieldWrapper: React.FC<FieldWrapperInterface> = ({
 							 */
 							getActiveDependees(newValue).map((dependee) => {
 								Object.entries(
-									dependee.fieldsDefaultValues
+									dependee.fieldsDefaultValues,
 								).forEach(([name, dependeeValue]) => {
 									newData[name] = dependeeValue;
 								});

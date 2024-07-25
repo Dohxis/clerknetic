@@ -7,7 +7,7 @@ export const useCheckboxes = (allPossibleValues: (string | null)[]) => {
 	const onHeadCheckboxChange = (_: string, checked: boolean) => {
 		if (checked) {
 			setCheckedValues(
-				allPossibleValues.filter((value) => value !== null) as string[]
+				allPossibleValues.filter((value) => value !== null) as string[],
 			);
 			setHeadChecked(true);
 		} else {
@@ -26,7 +26,7 @@ export const useCheckboxes = (allPossibleValues: (string | null)[]) => {
 			}
 		} else {
 			setCheckedValues(
-				checkedValues.filter((value) => value !== givenValue)
+				checkedValues.filter((value) => value !== givenValue),
 			);
 			setHeadChecked(false);
 		}

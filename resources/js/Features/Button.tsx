@@ -34,7 +34,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonInterface>(
 			contentClassName = "",
 			children,
 		},
-		ref
+		ref,
 	) => {
 		const [timeoutLoadingEnded, setTimeoutLoadingEnded] = useState(true);
 
@@ -124,5 +124,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonInterface>(
 				)}
 			</Link>
 		);
-	}
+	},
 );

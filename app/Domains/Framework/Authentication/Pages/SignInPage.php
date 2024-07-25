@@ -9,35 +9,33 @@ use App\Domains\Framework\Page\Page;
 
 class SignInPage extends Page
 {
-    public function route(): string
-    {
-        return "/sign-in";
-    }
+	public function route(): string
+	{
+		return "/sign-in";
+	}
 
-    public function routeName(): string
-    {
-        return "sign-in";
-    }
+	public function routeName(): string
+	{
+		return "sign-in";
+	}
 
-    public function title(): string
-    {
-        return "Sign in";
-    }
+	public function title(): string
+	{
+		return "Sign in";
+	}
 
-    public function layout(): Layout
-    {
-        return UnauthorizedLayout::make();
-    }
+	public function layout(): Layout
+	{
+		return UnauthorizedLayout::make();
+	}
 
-    public function nodes(): array
-    {
-        return [
-            SignInForm::make()
-        ];
-    }
+	public function nodes(): array
+	{
+		return [SignInForm::make()];
+	}
 
-    public function operations(): array
-    {
-        return [SignInForm::class];
-    }
+	public function operations(): array
+	{
+		return [SignInForm::class];
+	}
 }

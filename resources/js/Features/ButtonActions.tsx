@@ -10,5 +10,5 @@ export const ButtonActions = forwardRef<HTMLDivElement, ButtonActionsInterface>(
 		<div ref={ref} className={`flex items-center space-x-2 ${className}`}>
 			{children}
 		</div>
-	)
+	),
 );

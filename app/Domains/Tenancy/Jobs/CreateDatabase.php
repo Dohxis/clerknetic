@@ -16,40 +16,42 @@ use Stancl\Tenancy\Exceptions\TenantDatabaseAlreadyExistsException;
 
 class CreateDatabase implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /** @var TenantWithDatabase|Model */
-    protected $tenant;
+	/** @var TenantWithDatabase|Model */
+	protected $tenant;
 
-    public function __construct(TenantWithDatabase $tenant)
-    {
-        $this->tenant = $tenant;
-    }
+	public function __construct(TenantWithDatabase $tenant)
+	{
+		$this->tenant = $tenant;
+	}
 
-    public function handle(DatabaseManager $databaseManager)
-    {
-        event(new CreatingDatabase($this->tenant));
+	public function handle(DatabaseManager $databaseManager)
+	{
+		event(new CreatingDatabase($this->tenant));
 
-        // Terminate execution of this job & other jobs in the pipeline
-        if ($this->tenant->getInternal('create_database') === false) {
-            return false;
-        }
+		// Terminate execution of this job & other jobs in the pipeline
+		if ($this->tenant->getInternal("create_database") === false) {
+			return false;
+		}
 
-        $this->tenant->database()->makeCredentials();
+		$this->tenant->database()->makeCredentials();
 
+		try {
+			$databaseManager->ensureTenantCanBeCreated($this->tenant);
 
-        try {
-            $databaseManager->ensureTenantCanBeCreated($this->tenant);
+			$this->tenant
+				->database()
+				->manager()
+				->createDatabase($this->tenant);
+		} catch (TenantDatabaseAlreadyExistsException $exception) {
+			// We ignore the error during the development, so we
+			// would be able to reuse the tenant ID
+			if (app()->isProduction()) {
+				throw $exception;
+			}
+		}
 
-            $this->tenant->database()->manager()->createDatabase($this->tenant);
-        } catch (TenantDatabaseAlreadyExistsException $exception) {
-            // We ignore the error during the development, so we
-            // would be able to reuse the tenant ID
-            if (app()->isProduction()) {
-                throw $exception;
-            }
-        }
-
-        event(new DatabaseCreated($this->tenant));
-    }
+		event(new DatabaseCreated($this->tenant));
+	}
 }

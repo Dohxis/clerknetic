@@ -21,131 +21,131 @@ use Inertia\Response;
 
 abstract class Page extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    use HasRegisterRoutes;
-    use HasResolveHelpers;
+	use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+	use HasRegisterRoutes;
+	use HasResolveHelpers;
 
-    abstract public function title(): string;
+	abstract public function title(): string;
 
-    abstract public function route(): string;
+	abstract public function route(): string;
 
-    /**
-     * @return Component[]
-     */
-    abstract public function nodes(): array;
+	/**
+	 * @return Component[]
+	 */
+	abstract public function nodes(): array;
 
-    public function routeName(): ?string
-    {
-        return null;
-    }
+	public function routeName(): ?string
+	{
+		return null;
+	}
 
-    /**
-     * @return string[]
-     */
-    public function operations(): array
-    {
-        return [];
-    }
+	/**
+	 * @return string[]
+	 */
+	public function operations(): array
+	{
+		return [];
+	}
 
-    /**
-     * @return Component[]
-     */
-    public function actions(): array
-    {
-        return [];
-    }
+	/**
+	 * @return Component[]
+	 */
+	public function actions(): array
+	{
+		return [];
+	}
 
-    public function layout(): Layout
-    {
-        /**
-         * @var Layout|LayoutResolver $layout
-         */
-        $layout = app(LayoutResolver::class);
+	public function layout(): Layout
+	{
+		/**
+		 * @var Layout|LayoutResolver $layout
+		 */
+		$layout = app(LayoutResolver::class);
 
-        if ($layout instanceof LayoutResolver) {
-            return AuthorizedLayout::make();
-        }
+		if ($layout instanceof LayoutResolver) {
+			return AuthorizedLayout::make();
+		}
 
-        return $layout;
-    }
+		return $layout;
+	}
 
-    /**
-     * @return array{route: string, title: string, activeMatch: string}[]
-     */
-    public function navigation(): array
-    {
-        $navigation = app(NavigationResolver::class);
+	/**
+	 * @return array{route: string, title: string, activeMatch: string}[]
+	 */
+	public function navigation(): array
+	{
+		$navigation = app(NavigationResolver::class);
 
-        return ExportBuilder::exportArray($navigation->getNavigationItems());
-    }
+		return ExportBuilder::exportArray($navigation->getNavigationItems());
+	}
 
-    public static function getRoute(): string
-    {
-        $page = new static();
+	public static function getRoute(): string
+	{
+		$page = new static();
 
-        return $page->route();
-    }
+		return $page->route();
+	}
 
-    public static function getRouteName(): string
-    {
-        $page = new static();
+	public static function getRouteName(): string
+	{
+		$page = new static();
 
-        return $page->routeName();
-    }
+		return $page->routeName();
+	}
 
-    protected function getPageTitle(): string
-    {
-        return $this->title();
-    }
+	protected function getPageTitle(): string
+	{
+		return $this->title();
+	}
 
-    /**
-     * @return array<int, array{
-     *     title: string,
-     *     count: int|null,
-     *     icon: string|null,
-     *     link: string,
-     *     active: bool
-     * }>
-     */
-    protected function getTabs(): array
-    {
-        return [];
-    }
+	/**
+	 * @return array<int, array{
+	 *     title: string,
+	 *     count: int|null,
+	 *     icon: string|null,
+	 *     link: string,
+	 *     active: bool
+	 * }>
+	 */
+	protected function getTabs(): array
+	{
+		return [];
+	}
 
-    protected function getTabsDesign(): ?string
-    {
-        return null;
-    }
+	protected function getTabsDesign(): ?string
+	{
+		return null;
+	}
 
-    public function handleRequest(): Response
-    {
-        return StructuredPageResponse::make()
-            ->setTitle($this->getPageTitle())
-            ->setLayout($this->layout())
-            ->setTabs($this->getTabs())
-            ->setTabsDesign($this->getTabsDesign())
-            ->setNodes($this->nodes())
-            ->export();
-    }
+	public function handleRequest(): Response
+	{
+		return StructuredPageResponse::make()
+			->setTitle($this->getPageTitle())
+			->setLayout($this->layout())
+			->setTabs($this->getTabs())
+			->setTabsDesign($this->getTabsDesign())
+			->setNodes($this->nodes())
+			->export();
+	}
 
-    public function registerRoutes(): void
-    {
-        foreach ($this->operations() as $operationClass) {
-            /** @var Operation $operation */
-            $operation = new $operationClass();
+	public function registerRoutes(): void
+	{
+		foreach ($this->operations() as $operationClass) {
+			/** @var Operation $operation */
+			$operation = new $operationClass();
 
-            $operation::register();
-        }
+			$operation::register();
+		}
 
-        $routeName = $this->routeName();
+		$routeName = $this->routeName();
 
-        $route = RouteUtility::get(
-            $this->route(),
-            fn() => $this->handleRequest()
-        );
+		$route = RouteUtility::get(
+			$this->route(),
+			fn() => $this->handleRequest()
+		);
 
-        if ($routeName !== null) {
-            $route->name($routeName);
-        }
-    }
+		if ($routeName !== null) {
+			$route->name($routeName);
+		}
+	}
 }

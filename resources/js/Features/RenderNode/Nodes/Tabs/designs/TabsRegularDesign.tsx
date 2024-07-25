@@ -29,7 +29,7 @@ export const TabsRegularDesign: React.FC<TabsDesignInterface> = ({
 								</div>
 							)}
 						</NavigationItem>
-					)
+					),
 				)}
 
 				{actions.length > 0 && (

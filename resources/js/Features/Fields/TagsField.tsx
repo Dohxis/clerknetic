@@ -46,7 +46,7 @@ export const TagsField: React.FC<TagsFieldInterface> = (props) => {
 	};
 
 	const handleOnKeyUp: React.KeyboardEventHandler<HTMLInputElement> = (
-		event
+		event,
 	) => {
 		event.stopPropagation();
 
@@ -60,7 +60,7 @@ export const TagsField: React.FC<TagsFieldInterface> = (props) => {
 		const newTag = text
 			.replace(
 				new RegExp(charSeparators.map(escapeRegExp).join("|"), "g"),
-				""
+				"",
 			)
 			.replace(/\n/g, ".")
 			.trim();
@@ -68,7 +68,7 @@ export const TagsField: React.FC<TagsFieldInterface> = (props) => {
 			event.preventDefault();
 
 			const tagIsOnlySeparator = charSeparators.some(
-				(separator) => separator === newTag
+				(separator) => separator === newTag,
 			);
 			if (newTag === "" || tagIsOnlySeparator || tags.includes(newTag)) {
 				(event.target as any).value = "";
@@ -140,7 +140,7 @@ interface TagInterface {
 
 export const Tag: React.FC<TagInterface> = ({ text, remove, disabled }) => {
 	const handleOnRemove: React.MouseEventHandler<HTMLButtonElement> = (
-		event
+		event,
 	) => {
 		event.stopPropagation();
 		remove(text);

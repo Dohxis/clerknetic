@@ -93,7 +93,7 @@ export const Modal: React.FC<ModalInterface> = ({
 									leave: "transform transition ease-in duration-300",
 									leaveFrom: "opacity-100 scale-100",
 									leaveTo: "opacity-0 scale-95",
-							  }
+								}
 							: {
 									enter: "transform transition ease-in-out duration-300",
 									enterFrom: "translate-x-full",
@@ -101,7 +101,7 @@ export const Modal: React.FC<ModalInterface> = ({
 									leave: "transform transition ease-in-out duration-300",
 									leaveFrom: "translate-x-0",
 									leaveTo: "translate-x-full",
-							  })}
+								})}
 					>
 						<div
 							className={`flex h-full flex-col bg-white shadow-xl ${

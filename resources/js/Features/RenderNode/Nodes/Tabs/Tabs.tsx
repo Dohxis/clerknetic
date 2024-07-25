@@ -25,12 +25,12 @@ export interface TabsDesignInterface {
 			link: TabInterface["link"] | null;
 			active: boolean;
 			onClick: () => void;
-		}) => ReactElement
+		}) => ReactElement,
 	) => ReactElement[];
 	eachTabContent: (
 		renderTabContent: (data: {
 			nodes: TabInterface["nodes"];
-		}) => ReactElement
+		}) => ReactElement,
 	) => (ReactElement | undefined)[];
 }
 
@@ -43,16 +43,16 @@ export interface TabsInterface {
 export const Tabs: React.FC<TabsInterface> = ({ design, tabs }) => {
 	const primaryTabIndex = tabs.findIndex((tab) => tab.primary);
 	const [activeIndex, setActiveIndex] = useState<number>(
-		primaryTabIndex === -1 ? 0 : primaryTabIndex
+		primaryTabIndex === -1 ? 0 : primaryTabIndex,
 	);
 	const renderedTabs = useRef<boolean[]>(
-		Array(tabs.length).fill(false)
+		Array(tabs.length).fill(false),
 	).current;
 
 	const actions = tabs[activeIndex].actions;
 
 	const eachNavigationItem: TabsDesignInterface["eachNavigationItem"] = (
-		renderNavigationItem
+		renderNavigationItem,
 	) => {
 		return tabs.map((tab, index) =>
 			renderNavigationItem({
@@ -62,12 +62,12 @@ export const Tabs: React.FC<TabsInterface> = ({ design, tabs }) => {
 				active: activeIndex === index,
 				link: tab.link === null ? null : tab.link,
 				onClick: () => onTabClick(index),
-			})
+			}),
 		);
 	};
 
 	const eachTabContent: TabsDesignInterface["eachTabContent"] = (
-		renderTabContent
+		renderTabContent,
 	) => {
 		return tabs.map(({ title, nodes }, index) => {
 			if (!renderedTabs[index]) {

@@ -3,7 +3,7 @@ import { NotificationItemType } from "./Notifications";
 
 type CreateNotificationFunctionType = (
 	title: string,
-	description: string
+	description: string,
 ) => void;
 
 interface NotificationsContextInterface {
@@ -17,7 +17,7 @@ const NotificationsContext = React.createContext<NotificationsContextInterface>(
 		createNotification: () => {},
 		successNotification: () => {},
 		dangerNotification: () => {},
-	}
+	},
 );
 
 export default NotificationsContext;

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Stancl\Tenancy\Database\Concerns\CentralConnection;
 
 /**
- * 
+ *
  *
  * @property string $id
  * @property string $slug
@@ -32,19 +32,19 @@ use Stancl\Tenancy\Database\Concerns\CentralConnection;
  */
 class Organization extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    use HasNamedId;
+	use HasNamedId;
 
-    use CentralConnection;
+	use CentralConnection;
 
-    protected string $namedIdPrefix = "org";
+	protected string $namedIdPrefix = "org";
 
-    /** @var array<int, string> */
-    protected $guarded = [];
+	/** @var array<int, string> */
+	protected $guarded = [];
 
-    public function users()
-    {
-        return $this->hasMany(OrganizationUser::class);
-    }
+	public function users()
+	{
+		return $this->hasMany(OrganizationUser::class);
+	}
 }

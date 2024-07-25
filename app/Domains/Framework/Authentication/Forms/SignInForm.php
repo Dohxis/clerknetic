@@ -24,91 +24,95 @@ use Illuminate\Support\Str;
 
 class SignInForm extends ProcessableForm
 {
-    public function route(): string
-    {
-        return "/sign-in";
-    }
+	public function route(): string
+	{
+		return "/sign-in";
+	}
 
-    protected function form(Form $form): Form
-    {
-        return $form->withoutPanel()->setNodes([
-            TextField::make("Email")->setType("email"),
-            TextField::make("Password")->setType("password"),
-            Flex::make()
-                ->setJustify(Justify::BETWEEN)
-                ->setNodes([
-                    CheckboxField::make("Remember me"),
+	protected function form(Form $form): Form
+	{
+		return $form->withoutPanel()->setNodes([
+			TextField::make("Email")->setType("email"),
+			TextField::make("Password")->setType("password"),
+			Flex::make()
+				->setJustify(Justify::BETWEEN)
+				->setNodes([
+					CheckboxField::make("Remember me"),
 
-                    Link::make()
-                        ->setTitle("Forgot your password?")
-                        ->setTextAlign(Align::RIGHT)
-                        ->toPage(ForgotPasswordPage::class)
-                ]),
-            FormButton::make()->setTitle("Login"),
-        ]);
-    }
+					Link::make()
+						->setTitle("Forgot your password?")
+						->setTextAlign(Align::RIGHT)
+						->toPage(ForgotPasswordPage::class),
+				]),
+			FormButton::make()->setTitle("Login"),
+		]);
+	}
 
-    /**
-     * @throws HomepageNotFoundException
-     */
-    public function handle(object $validated)
-    {
-        $throttleKey = Str::lower(
-            "sign-in|" . $validated->email . "|" . request()->ip()
-        );
+	/**
+	 * @throws HomepageNotFoundException
+	 */
+	public function handle(object $validated)
+	{
+		$throttleKey = Str::lower(
+			"sign-in|" . $validated->email . "|" . request()->ip()
+		);
 
-        $isRateLimitReached = RateLimiter::tooManyAttempts($throttleKey, 5);
+		$isRateLimitReached = RateLimiter::tooManyAttempts($throttleKey, 5);
 
-        if ($isRateLimitReached) {
-            Notification::danger(
-                trans("auth.throttle", [
-                    "seconds" => RateLimiter::availableIn($throttleKey),
-                ])
-            );
+		if ($isRateLimitReached) {
+			Notification::danger(
+				trans("auth.throttle", [
+					"seconds" => RateLimiter::availableIn($throttleKey),
+				])
+			);
 
-            return redirect()->back();
-        }
+			return redirect()->back();
+		}
 
-        $user = User::whereEmail($validated->email)->first();
+		$user = User::whereEmail($validated->email)->first();
 
-        $organizationUser = OrganizationUser::whereUserId($user->id)->first();
+		$organizationUser = OrganizationUser::whereUserId($user->id)->first();
 
-        $tenant = Tenant::find($organizationUser->organization->tenant_id);
+		$tenant = Tenant::find($organizationUser->organization->tenant_id);
 
-        if (!$tenant) {
-            return $this->sendFailedAuthenticationMessage($throttleKey);
-        }
+		if (!$tenant) {
+			return $this->sendFailedAuthenticationMessage($throttleKey);
+		}
 
-        $tenant->run(function () use ($organizationUser, $validated, $throttleKey) {
-            $isValidAuthenticationAttempt = Auth::attempt(
-                [
-                    "email" => $validated->email,
-                    "password" => $validated->password,
-                ],
-                $validated->remember_me
-            );
+		$tenant->run(function () use (
+			$organizationUser,
+			$validated,
+			$throttleKey
+		) {
+			$isValidAuthenticationAttempt = Auth::attempt(
+				[
+					"email" => $validated->email,
+					"password" => $validated->password,
+				],
+				$validated->remember_me
+			);
 
-            if (!$isValidAuthenticationAttempt) {
-                return $this->sendFailedAuthenticationMessage($throttleKey);
-            }
+			if (!$isValidAuthenticationAttempt) {
+				return $this->sendFailedAuthenticationMessage($throttleKey);
+			}
 
-            RateLimiter::clear($throttleKey);
+			RateLimiter::clear($throttleKey);
 
-            session()->regenerate();
+			session()->regenerate();
 
-            return redirect()->intended(AppServiceProvider::getHomepage());
-        });
+			return redirect()->intended(AppServiceProvider::getHomepage());
+		});
 
-        return $this->sendFailedAuthenticationMessage($throttleKey);
-    }
+		return $this->sendFailedAuthenticationMessage($throttleKey);
+	}
 
-    private function sendFailedAuthenticationMessage(string $throttleKey)
-    {
-        RateLimiter::hit($throttleKey);
+	private function sendFailedAuthenticationMessage(string $throttleKey)
+	{
+		RateLimiter::hit($throttleKey);
 
-        /** @phpstan-ignore-next-line */
-        Notification::danger(__("auth.failed"));
+		/** @phpstan-ignore-next-line */
+		Notification::danger(__("auth.failed"));
 
-        return redirect()->back();
-    }
+		return redirect()->back();
+	}
 }

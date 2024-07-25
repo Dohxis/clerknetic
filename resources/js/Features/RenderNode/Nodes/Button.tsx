@@ -54,7 +54,7 @@ export const Button: React.FC<ButtonInterface> = ({
 								isInsidePanelActions
 									? "sm:min-w-none sm:px-4"
 									: ""
-						  }`
+							}`
 				} ${className}`}
 				contentClassName="space-x-2"
 				type={type}

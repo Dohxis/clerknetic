@@ -32,7 +32,7 @@ export const RadiosField: React.FC<RadiosFieldInterface> = (props) => {
 	} = props;
 
 	const hasAnyDescription = radios.some(
-		(radio) => radio.description !== null
+		(radio) => radio.description !== null,
 	);
 	return (
 		<div>

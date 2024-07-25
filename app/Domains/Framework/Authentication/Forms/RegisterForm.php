@@ -14,34 +14,34 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterForm extends ProcessableForm
 {
-    public function route(): string
-    {
-        return "/auth/register";
-    }
+	public function route(): string
+	{
+		return "/auth/register";
+	}
 
-    protected function form(Form $form): Form
-    {
-        return $form
-            ->withoutPanel()
-            ->setNodes([
-                ...UserFormFactory::fields(user: null),
-                FormButton::make()->setTitle("Register"),
-            ]);
-    }
+	protected function form(Form $form): Form
+	{
+		return $form
+			->withoutPanel()
+			->setNodes([
+				...UserFormFactory::fields(user: null),
+				FormButton::make()->setTitle("Register"),
+			]);
+	}
 
-    public function handle(object $validated)
-    {
-        $user = app(CreateOrUpdateUserAction::class)->execute(
-            validated: $validated,
-            user: null
-        );
+	public function handle(object $validated)
+	{
+		$user = app(CreateOrUpdateUserAction::class)->execute(
+			validated: $validated,
+			user: null
+		);
 
-        /** @phpstan-ignore-next-line */
-        Auth::login($user);
+		/** @phpstan-ignore-next-line */
+		Auth::login($user);
 
-        /** @phpstan-ignore-next-line */
-        event(new Registered($user));
+		/** @phpstan-ignore-next-line */
+		event(new Registered($user));
 
-        return redirect(redirect(AppServiceProvider::getHomepage()));
-    }
+		return redirect(redirect(AppServiceProvider::getHomepage()));
+	}
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useMobileLayout = () => {
 	const [isMobileLayout, setMobileLayout] = useState(
-		window.innerWidth <= 1024
+		window.innerWidth <= 1024,
 	);
 
 	const handleResize = () => {

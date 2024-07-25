@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Stancl\Tenancy\Database\Concerns\CentralConnection;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $organization_id
@@ -27,15 +27,15 @@ use Stancl\Tenancy\Database\Concerns\CentralConnection;
  */
 class OrganizationUser extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    use CentralConnection;
+	use CentralConnection;
 
-    /** @var array<int, string> */
-    protected $guarded = [];
+	/** @var array<int, string> */
+	protected $guarded = [];
 
-    public function organization()
-    {
-        return $this->belongsTo(Organization::class);
-    }
+	public function organization()
+	{
+		return $this->belongsTo(Organization::class);
+	}
 }

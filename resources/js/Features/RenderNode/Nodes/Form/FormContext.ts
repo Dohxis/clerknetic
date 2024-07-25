@@ -11,8 +11,8 @@ export interface FormContextInterface {
 	setData: FieldInterface<unknown>["setData"];
 	setDataRaw: (
 		getNewData: (
-			previousData: Record<string, unknown>
-		) => Record<string, unknown>
+			previousData: Record<string, unknown>,
+		) => Record<string, unknown>,
 	) => void;
 }
 

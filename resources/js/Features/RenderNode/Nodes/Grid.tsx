@@ -30,7 +30,7 @@ export const Grid: React.FC<GridInterface> = ({ nodes, gap, columns }) => {
 		<div
 			className={`grid-node-container grid ${gapClassName}`}
 			style={generateResponsiveVariable("gtc", columns, (value) =>
-				value.reduce((count, current) => count + current, 0)
+				value.reduce((count, current) => count + current, 0),
 			)}
 		>
 			{nodes.map((node, index) => (
@@ -40,7 +40,7 @@ export const Grid: React.FC<GridInterface> = ({ nodes, gap, columns }) => {
 					style={generateResponsiveVariable(
 						"gc",
 						columns,
-						(columns) => columns[index] ?? 0
+						(columns) => columns[index] ?? 0,
 					)}
 				>
 					<RenderNode key={index} {...node} />

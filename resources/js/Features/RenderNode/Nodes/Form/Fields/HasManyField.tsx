@@ -44,7 +44,7 @@ export const HasManyField: React.FC<HasManyFieldInterface> = (props) => {
 	const removeItem = (index: number) => {
 		setData?.(
 			name,
-			items.filter((_, itemIndex) => itemIndex !== index)
+			items.filter((_, itemIndex) => itemIndex !== index),
 		);
 	};
 
@@ -59,21 +59,21 @@ export const HasManyField: React.FC<HasManyFieldInterface> = (props) => {
 				...previous,
 				[fieldName]: errors[`${name}.${index}.${fieldName}`],
 			}),
-			{}
+			{},
 		);
 	};
 
 	const setItemFieldValue = (
 		itemFieldName: string,
 		itemFieldValue: unknown,
-		index: number
+		index: number,
 	) => {
 		setItemData(
 			{
 				...items[index],
 				[itemFieldName]: itemFieldValue,
 			},
-			index
+			index,
 		);
 	};
 
@@ -111,7 +111,7 @@ export const HasManyField: React.FC<HasManyFieldInterface> = (props) => {
 								setItemFieldValue(
 									itemFieldName,
 									itemFieldValue,
-									index
+									index,
 								)
 							}
 							setDataRaw={(getNewItemData) =>
