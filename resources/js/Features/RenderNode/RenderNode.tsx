@@ -47,9 +47,12 @@ import { TextareaField } from "./Nodes/Form/Fields/TextareaField";
 import { Metric } from "./Nodes/Metric/Metric";
 import { TagsField } from "./Nodes/Form/Fields/TagsField";
 
-export const RenderNode: React.FC<NodeType> = ({ nodeType, ...props }) => {
+export const RenderNode: React.FunctionComponent<NodeType> = ({
+	nodeType,
+	...props
+}) => {
 	// eslint-disable-next-line
-	const Component: React.FC<any> = {
+	const Component: React.FunctionComponent<any> = {
 		Grid,
 		Flex,
 		Row,

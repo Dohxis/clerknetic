@@ -10,7 +10,7 @@ export interface TooltipInterface {
 	nodes: NodeType[];
 }
 
-export const Tooltip: React.FC<TooltipInterface> = ({
+export const Tooltip: React.FunctionComponent<TooltipInterface> = ({
 	content,
 	placement,
 	nodes,

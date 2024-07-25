@@ -14,6 +14,6 @@ export interface FileFieldInterface
 	nodeType: "FileField";
 }
 
-export const FileField: React.FC<FileFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={FileFieldComponent} />
-);
+export const FileField: React.FunctionComponent<FileFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={FileFieldComponent} />;

@@ -12,10 +12,9 @@ export interface BalanceInformationInterface {
 	actions: NodeType[];
 }
 
-export const BalanceInformation: React.FC<BalanceInformationInterface> = ({
-	title,
-	actions,
-}) => {
+export const BalanceInformation: React.FunctionComponent<
+	BalanceInformationInterface
+> = ({ title, actions }) => {
 	const { balance } = usePage<PagePropsType>().props;
 
 	return (

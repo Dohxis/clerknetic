@@ -5,11 +5,9 @@ import { Panel } from "../../../../Panel/Panel";
 import { RenderNodes } from "../../../RenderNodes";
 import { TabsDesignInterface } from "../Tabs";
 
-export const TabsRegularDesign: React.FC<TabsDesignInterface> = ({
-	actions,
-	eachNavigationItem,
-	eachTabContent,
-}) => {
+export const TabsRegularDesign: React.FunctionComponent<
+	TabsDesignInterface
+> = ({ actions, eachNavigationItem, eachTabContent }) => {
 	return (
 		<Panel withPadding={false}>
 			<div className="flex items-center overflow-x-auto">

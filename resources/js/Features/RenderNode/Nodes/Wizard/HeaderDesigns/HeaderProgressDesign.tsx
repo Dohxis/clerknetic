@@ -1,10 +1,9 @@
 import React from "react";
 import { WizardHeaderInterface } from "../WizardHeader";
 
-export const HeaderProgressDesign: React.FC<WizardHeaderInterface> = ({
-	activeIndex,
-	steps,
-}) => (
+export const HeaderProgressDesign: React.FunctionComponent<
+	WizardHeaderInterface
+> = ({ activeIndex, steps }) => (
 	<div className="h-[3px] w-full">
 		<div
 			className="h-full bg-primary-600"

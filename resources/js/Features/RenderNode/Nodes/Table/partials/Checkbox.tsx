@@ -7,7 +7,7 @@ interface CheckboxInterface {
 	disabled?: boolean;
 }
 
-export const Checkbox: React.FC<CheckboxInterface> = ({
+export const Checkbox: React.FunctionComponent<CheckboxInterface> = ({
 	name,
 	checked,
 	onChange,

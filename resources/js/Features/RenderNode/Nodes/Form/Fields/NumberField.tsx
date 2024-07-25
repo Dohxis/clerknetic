@@ -14,6 +14,6 @@ export interface NumberFieldInterface
 	nodeType: "NumberField";
 }
 
-export const NumberField: React.FC<NumberFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={NumberFieldComponent} />
-);
+export const NumberField: React.FunctionComponent<NumberFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={NumberFieldComponent} />;

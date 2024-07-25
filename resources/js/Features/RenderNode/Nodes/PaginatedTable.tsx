@@ -21,15 +21,9 @@ export interface PaginatedTableInterface
 	nextPageUrl: string | null;
 }
 
-export const PaginatedTable: React.FC<PaginatedTableInterface> = ({
-	total,
-	from,
-	to,
-	links,
-	previousPageUrl,
-	nextPageUrl,
-	...props
-}) => {
+export const PaginatedTable: React.FunctionComponent<
+	PaginatedTableInterface
+> = ({ total, from, to, links, previousPageUrl, nextPageUrl, ...props }) => {
 	const { t } = useTranslation();
 
 	const showPaginationButtons =
@@ -138,7 +132,7 @@ interface SequenceButtonInterface extends PropsWithChildren {
 	link: string | null;
 }
 
-const SequenceButton: React.FC<SequenceButtonInterface> = ({
+const SequenceButton: React.FunctionComponent<SequenceButtonInterface> = ({
 	direction,
 	link,
 	children,

@@ -3,12 +3,9 @@ import { Panel } from "../../../../Panel/Panel";
 import { RenderNodes } from "../../../RenderNodes";
 import { CardDesignInterface } from "../Card";
 
-export const CardVerticalDesign: React.FC<CardDesignInterface> = ({
-	title,
-	description,
-	image,
-	buttons,
-}) => (
+export const CardVerticalDesign: React.FunctionComponent<
+	CardDesignInterface
+> = ({ title, description, image, buttons }) => (
 	<Panel
 		withPadding={false}
 		className="h-full"

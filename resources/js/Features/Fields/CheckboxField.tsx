@@ -10,7 +10,9 @@ export interface CheckboxFieldInterface
 	disabled?: boolean;
 }
 
-export const CheckboxField: React.FC<CheckboxFieldInterface> = (props) => {
+export const CheckboxField: React.FunctionComponent<CheckboxFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		value = false,

@@ -10,7 +10,7 @@ interface ChoiceButtonInterface extends PropsWithChildren {
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const ChoiceButton: React.FC<ChoiceButtonInterface> = ({
+export const ChoiceButton: React.FunctionComponent<ChoiceButtonInterface> = ({
 	id,
 	title,
 	description,

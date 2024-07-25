@@ -8,13 +8,9 @@ interface NavigationItemInterface extends PropsWithChildren {
 	onClick?: () => void;
 }
 
-export const NavigationItem: React.FC<NavigationItemInterface> = ({
-	active,
-	link,
-	onClick,
-	className,
-	children,
-}) => {
+export const NavigationItem: React.FunctionComponent<
+	NavigationItemInterface
+> = ({ active, link, onClick, className, children }) => {
 	return (
 		<Link
 			className={`relative flex items-center rounded-md py-2 px-5 text-sm font-medium transition duration-150 focus:outline-none ${

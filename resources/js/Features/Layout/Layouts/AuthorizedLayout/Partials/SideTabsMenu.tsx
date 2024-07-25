@@ -7,7 +7,9 @@ interface SideTabsMenuInterface {
 	tabs: TabsMenuItemInterface[];
 }
 
-export const SideTabsMenu: React.FC<SideTabsMenuInterface> = ({ tabs }) => (
+export const SideTabsMenu: React.FunctionComponent<SideTabsMenuInterface> = ({
+	tabs,
+}) => (
 	<nav className="flex w-64 flex-none flex-col space-y-1">
 		{tabs.map(({ active, link, title, count, icon }) => (
 			<Link

@@ -14,7 +14,9 @@ export type NotificationItemType = Pick<
 	"title" | "description" | "type"
 >;
 
-export const Notifications: React.FC<PropsWithChildren> = ({ children }) => {
+export const Notifications: React.FunctionComponent<PropsWithChildren> = ({
+	children,
+}) => {
 	const {
 		props: { notification },
 	} = usePage<PagePropsType>();

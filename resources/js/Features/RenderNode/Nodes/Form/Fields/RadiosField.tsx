@@ -14,6 +14,6 @@ export interface RadiosFieldInterface
 	nodeType: "RadiosField";
 }
 
-export const RadiosField: React.FC<RadiosFieldInterface> = (props) => (
-	<FieldWrapper props={{ ...props }} field={RadiosFieldComponent} />
-);
+export const RadiosField: React.FunctionComponent<RadiosFieldInterface> = (
+	props,
+) => <FieldWrapper props={{ ...props }} field={RadiosFieldComponent} />;

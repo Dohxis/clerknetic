@@ -20,7 +20,10 @@ export interface CardDesignInterface
 		"title" | "description" | "image" | "buttons"
 	> {}
 
-export const Card: React.FC<CardInterface> = ({ design, ...props }) => {
+export const Card: React.FunctionComponent<CardInterface> = ({
+	design,
+	...props
+}) => {
 	const Tag =
 		design === CardDesignEnum.REGULAR
 			? CardSimpleDesign

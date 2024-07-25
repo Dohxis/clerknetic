@@ -13,7 +13,7 @@ export interface MetricInterface {
 	changeTrend: MetricTrendType;
 }
 
-export const Metric: React.FC<MetricInterface> = ({
+export const Metric: React.FunctionComponent<MetricInterface> = ({
 	title,
 	value,
 	icon,

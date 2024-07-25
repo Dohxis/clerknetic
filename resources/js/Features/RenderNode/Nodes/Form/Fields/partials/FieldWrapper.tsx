@@ -15,10 +15,10 @@ export interface WrapperFieldPropsInterface {
 
 interface FieldWrapperInterface {
 	props: WrapperFieldPropsInterface & FieldComponentInterface<any>;
-	field: React.FC<any>;
+	field: React.FunctionComponent<any>;
 }
 
-export const FieldWrapper: React.FC<FieldWrapperInterface> = ({
+export const FieldWrapper: React.FunctionComponent<FieldWrapperInterface> = ({
 	props: { dependees, ...props },
 	field: Field,
 }) => {

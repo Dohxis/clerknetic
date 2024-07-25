@@ -8,9 +8,9 @@ interface CloseButtonInterface {
 	className?: string;
 }
 
-export const CloseModalButton: React.FC<CloseButtonInterface> = ({
-	className,
-}) => {
+export const CloseModalButton: React.FunctionComponent<
+	CloseButtonInterface
+> = ({ className }) => {
 	const { t } = useTranslation();
 
 	const { closeModal } = useContext(ModalContext);

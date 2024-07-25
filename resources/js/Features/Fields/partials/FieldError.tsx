@@ -7,7 +7,7 @@ export interface FieldErrorInterface
 	position?: "relative" | "absolute";
 }
 
-export const FieldError: React.FC<FieldErrorInterface> = ({
+export const FieldError: React.FunctionComponent<FieldErrorInterface> = ({
 	position = "absolute",
 	name,
 	errors,

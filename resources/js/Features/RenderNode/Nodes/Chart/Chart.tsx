@@ -36,7 +36,7 @@ export interface ChartInterface {
 		| null;
 }
 
-export const Chart: React.FC<ChartInterface> = ({
+export const Chart: React.FunctionComponent<ChartInterface> = ({
 	labels,
 	dataSets,
 	dataType,

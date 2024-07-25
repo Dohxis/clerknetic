@@ -8,7 +8,7 @@ export interface RowInterface {
 	gap: number;
 }
 
-export const Row: React.FC<RowInterface> = ({ nodes, gap }) => {
+export const Row: React.FunctionComponent<RowInterface> = ({ nodes, gap }) => {
 	const getSpaceClassName = (gap: number) => {
 		return {
 			0: "space-x-0",

@@ -20,7 +20,7 @@ export interface ModalInterface {
 	setOpen?: (open: boolean) => void;
 }
 
-export const Modal: React.FC<ModalInterface> = ({
+export const Modal: React.FunctionComponent<ModalInterface> = ({
 	title,
 	description,
 	form,

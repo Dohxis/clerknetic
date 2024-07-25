@@ -11,7 +11,9 @@ export interface TextareaFieldInterface extends FieldInterface<string | null> {
 	resizable: boolean;
 }
 
-export const TextareaField: React.FC<TextareaFieldInterface> = (props) => {
+export const TextareaField: React.FunctionComponent<TextareaFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		label,

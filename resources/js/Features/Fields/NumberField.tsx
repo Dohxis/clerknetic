@@ -16,7 +16,9 @@ export interface NumberFieldInterface extends FieldInterface<number | null> {
 	max?: number | null;
 }
 
-export const NumberField: React.FC<NumberFieldInterface> = (props) => {
+export const NumberField: React.FunctionComponent<NumberFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		label,

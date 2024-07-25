@@ -17,7 +17,7 @@ export interface AlertInterface {
 	setOpen?: (open: boolean) => void;
 }
 
-export const Alert: React.FC<AlertInterface> = ({
+export const Alert: React.FunctionComponent<AlertInterface> = ({
 	title,
 	description,
 	confirmButtonText,

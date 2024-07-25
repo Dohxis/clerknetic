@@ -13,7 +13,7 @@ export interface LinkInterface extends ButtonInstanceInterface {
 	textAlign: ResponsiveValueInterface<string> | null;
 }
 
-export const Link: React.FC<LinkInterface> = ({
+export const Link: React.FunctionComponent<LinkInterface> = ({
 	textAlign,
 	title,
 	type,

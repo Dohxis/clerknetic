@@ -5,7 +5,7 @@ interface IconInterface extends React.SVGProps<SVGSVGElement> {
 	className: string;
 }
 
-export const Icon: React.FC<IconInterface> = ({
+export const Icon: React.FunctionComponent<IconInterface> = ({
 	icon,
 	className,
 	...props

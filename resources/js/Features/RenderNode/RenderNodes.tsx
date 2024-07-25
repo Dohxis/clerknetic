@@ -7,7 +7,7 @@ interface RenderNodesInterface {
 	[name: string]: unknown;
 }
 
-export const RenderNodes: React.FC<RenderNodesInterface> = ({
+export const RenderNodes: React.FunctionComponent<RenderNodesInterface> = ({
 	nodes,
 	...props
 }) => (

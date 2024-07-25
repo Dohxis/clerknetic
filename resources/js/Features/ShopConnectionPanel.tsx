@@ -13,7 +13,9 @@ export interface ShopConnectionPanelInterface {
 	permissionsText: string | null;
 }
 
-export const ShopConnectionPanel: React.FC<ShopConnectionPanelInterface> = ({
+export const ShopConnectionPanel: React.FunctionComponent<
+	ShopConnectionPanelInterface
+> = ({
 	integrationName,
 	integrationLogoUrl,
 	acceptButton,

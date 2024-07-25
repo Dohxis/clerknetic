@@ -2,9 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { WizardHeaderInterface, WizardStepInterface } from "../WizardHeader";
 
-export const HeaderStepsDesign: React.FC<WizardHeaderInterface> = ({
-	steps,
-}) => (
+export const HeaderStepsDesign: React.FunctionComponent<
+	WizardHeaderInterface
+> = ({ steps }) => (
 	<div className="flex border-b border-gray-200 p-4 sm:space-x-6 sm:p-6">
 		{steps.map((step) => (
 			<Step key={step.index} {...step} total={steps.length} />
@@ -16,7 +16,7 @@ interface WizardRegularStepInterface extends WizardStepInterface {
 	total: number;
 }
 
-const Step: React.FC<WizardRegularStepInterface> = ({
+const Step: React.FunctionComponent<WizardRegularStepInterface> = ({
 	title,
 	index,
 	active,

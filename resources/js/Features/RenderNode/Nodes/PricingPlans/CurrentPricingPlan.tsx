@@ -9,11 +9,9 @@ export interface CurrentPricingPlanInterface {
 	buttons: ButtonInterface[];
 }
 
-export const CurrentPricingPlan: React.FC<CurrentPricingPlanInterface> = ({
-	title,
-	description,
-	buttons,
-}) => {
+export const CurrentPricingPlan: React.FunctionComponent<
+	CurrentPricingPlanInterface
+> = ({ title, description, buttons }) => {
 	return (
 		<div className="flex items-center justify-between p-6">
 			<div className="space-y-1">

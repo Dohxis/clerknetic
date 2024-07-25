@@ -14,7 +14,7 @@ export interface PricingPlansInterface {
 	plans: PricingPlanInterface[];
 }
 
-export const PricingPlans: React.FC<PricingPlansInterface> = ({
+export const PricingPlans: React.FunctionComponent<PricingPlansInterface> = ({
 	title,
 	description,
 	plans,

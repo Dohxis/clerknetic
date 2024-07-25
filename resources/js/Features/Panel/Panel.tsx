@@ -14,7 +14,7 @@ interface PanelInterface extends PropsWithChildren {
 	contentClassName?: string;
 }
 
-export const Panel: React.FC<PanelInterface> = ({
+export const Panel: React.FunctionComponent<PanelInterface> = ({
 	title = null,
 	description = null,
 	actions = null,

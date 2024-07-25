@@ -47,7 +47,7 @@ export interface SubmitOptionsInterface {
 	withData?: Record<string, unknown>;
 }
 
-export const Form: React.FC<FormInterface> = (givenProps) => {
+export const Form: React.FunctionComponent<FormInterface> = (givenProps) => {
 	const props = useRef(givenProps);
 	const initialBuild = useRef<boolean>(true);
 
@@ -76,7 +76,7 @@ interface InternalFormInterface extends FormInterface {
 	rebuild: (formNode: FormInterface) => void;
 }
 
-const InternalForm: React.FC<InternalFormInterface> = ({
+const InternalForm: React.FunctionComponent<InternalFormInterface> = ({
 	initialBuild,
 	title,
 	description,

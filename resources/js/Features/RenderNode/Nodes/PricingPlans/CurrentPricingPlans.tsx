@@ -12,11 +12,9 @@ export interface CurrentPricingPlansInterface {
 	plans: CurrentPricingPlanInterface[];
 }
 
-export const CurrentPricingPlans: React.FC<CurrentPricingPlansInterface> = ({
-	title,
-	description,
-	plans,
-}) => {
+export const CurrentPricingPlans: React.FunctionComponent<
+	CurrentPricingPlansInterface
+> = ({ title, description, plans }) => {
 	return (
 		<Panel
 			title={title}

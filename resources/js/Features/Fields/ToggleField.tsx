@@ -13,7 +13,9 @@ export interface ToggleFieldInterface extends FieldInterface<boolean> {
 	className?: string;
 }
 
-export const ToggleField: React.FC<ToggleFieldInterface> = (props) => {
+export const ToggleField: React.FunctionComponent<ToggleFieldInterface> = (
+	props,
+) => {
 	const {
 		label = null,
 		leftLabel = null,

@@ -11,7 +11,7 @@ export interface NotificationInterface {
 	close: () => void;
 }
 
-export const Notification: React.FC<NotificationInterface> = ({
+export const Notification: React.FunctionComponent<NotificationInterface> = ({
 	title,
 	description,
 	type,

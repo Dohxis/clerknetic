@@ -14,6 +14,6 @@ export interface SelectFieldInterface
 	nodeType: "SelectField";
 }
 
-export const SelectField: React.FC<SelectFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={SelectFieldComponent} />
-);
+export const SelectField: React.FunctionComponent<SelectFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={SelectFieldComponent} />;

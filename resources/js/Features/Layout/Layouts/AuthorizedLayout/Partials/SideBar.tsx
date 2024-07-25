@@ -15,7 +15,7 @@ interface SideBarInterface
 	closeSidebar: () => void;
 }
 
-export const SideBar: React.FC<SideBarInterface> = ({
+export const SideBar: React.FunctionComponent<SideBarInterface> = ({
 	open,
 	navigation,
 	isMobileLayout,

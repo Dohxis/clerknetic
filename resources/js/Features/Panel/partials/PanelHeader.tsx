@@ -9,7 +9,7 @@ interface PanelHeaderInterface extends PropsWithChildren {
 	className?: string;
 }
 
-export const PanelHeader: React.FC<PanelHeaderInterface> = ({
+export const PanelHeader: React.FunctionComponent<PanelHeaderInterface> = ({
 	title,
 	description,
 	actions,

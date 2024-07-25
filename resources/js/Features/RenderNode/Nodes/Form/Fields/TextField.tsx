@@ -14,6 +14,6 @@ export interface TextFieldInterface
 	nodeType: "TextField";
 }
 
-export const TextField: React.FC<TextFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={TextFieldComponent} />
-);
+export const TextField: React.FunctionComponent<TextFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={TextFieldComponent} />;

@@ -20,7 +20,9 @@ export interface RadiosFieldInterface
 	radios: GivenRadioButtonInterface[];
 }
 
-export const RadiosField: React.FC<RadiosFieldInterface> = (props) => {
+export const RadiosField: React.FunctionComponent<RadiosFieldInterface> = (
+	props,
+) => {
 	const {
 		label,
 		explanation,
@@ -72,7 +74,7 @@ interface RadioButtonInterface extends GivenRadioButtonInterface {
 	onSelect: () => void;
 }
 
-const RadioButton: React.FC<RadioButtonInterface> = ({
+const RadioButton: React.FunctionComponent<RadioButtonInterface> = ({
 	title,
 	description,
 	name,

@@ -19,7 +19,7 @@ export interface FileFieldInterface
 	acceptedExtensions: string[];
 }
 
-export const FileField: React.FC<FileFieldInterface> = ({
+export const FileField: React.FunctionComponent<FileFieldInterface> = ({
 	name,
 	label,
 	value,

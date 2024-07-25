@@ -9,7 +9,9 @@ export interface TagsFieldInterface extends FieldInterface<string[]> {
 	label: string;
 }
 
-export const TagsField: React.FC<TagsFieldInterface> = (props) => {
+export const TagsField: React.FunctionComponent<TagsFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		label,
@@ -138,7 +140,11 @@ interface TagInterface {
 	disabled?: boolean;
 }
 
-export const Tag: React.FC<TagInterface> = ({ text, remove, disabled }) => {
+export const Tag: React.FunctionComponent<TagInterface> = ({
+	text,
+	remove,
+	disabled,
+}) => {
 	const handleOnRemove: React.MouseEventHandler<HTMLButtonElement> = (
 		event,
 	) => {

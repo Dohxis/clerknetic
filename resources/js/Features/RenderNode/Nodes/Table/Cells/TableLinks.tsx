@@ -7,7 +7,9 @@ export interface TableLinksInterface {
 	nodes: NodeType[];
 }
 
-export const TableLinks: React.FC<TableLinksInterface> = ({ nodes }) => (
+export const TableLinks: React.FunctionComponent<TableLinksInterface> = ({
+	nodes,
+}) => (
 	<div className="space-x-6 whitespace-nowrap py-4">
 		<RenderNodes nodes={nodes} />
 	</div>

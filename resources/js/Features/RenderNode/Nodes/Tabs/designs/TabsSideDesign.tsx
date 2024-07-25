@@ -4,7 +4,7 @@ import { Link } from "../../../../Link";
 import { RenderNodes } from "../../../RenderNodes";
 import { TabsDesignInterface } from "../Tabs";
 
-export const TabsSideDesign: React.FC<TabsDesignInterface> = ({
+export const TabsSideDesign: React.FunctionComponent<TabsDesignInterface> = ({
 	eachNavigationItem,
 	eachTabContent,
 }) => {

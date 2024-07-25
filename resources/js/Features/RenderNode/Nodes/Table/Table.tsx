@@ -30,7 +30,7 @@ export interface TableInterface {
 	actions: NodeType[];
 }
 
-export const Table: React.FC<TableInterface> = ({
+export const Table: React.FunctionComponent<TableInterface> = ({
 	columns,
 	rows,
 	widths,

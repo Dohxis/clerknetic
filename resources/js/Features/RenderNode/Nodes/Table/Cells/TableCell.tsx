@@ -10,7 +10,7 @@ export interface TableCellInterface {
 	image: string | StatusImageType | null;
 }
 
-export const TableCell: React.FC<TableCellInterface> = ({
+export const TableCell: React.FunctionComponent<TableCellInterface> = ({
 	title,
 	titleLink,
 	description,
@@ -65,7 +65,11 @@ interface ContentInterface extends PropsWithChildren {
 	className: string;
 }
 
-const Content: React.FC<ContentInterface> = ({ link, className, children }) => {
+const Content: React.FunctionComponent<ContentInterface> = ({
+	link,
+	className,
+	children,
+}) => {
 	if (link === null) {
 		return <span className={className}>{children}</span>;
 	}
@@ -86,7 +90,9 @@ interface StatusBubbleInterface {
 	status: StatusImageType;
 }
 
-const StatusBubble: React.FC<StatusBubbleInterface> = ({ status }) => {
+const StatusBubble: React.FunctionComponent<StatusBubbleInterface> = ({
+	status,
+}) => {
 	const staticStatuses = {
 		[StatusImage.RED]: "ring-red-100 bg-red-400",
 		[StatusImage.YELLOW]: "ring-orange-100 bg-orange-400",

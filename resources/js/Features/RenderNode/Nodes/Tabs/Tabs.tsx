@@ -40,7 +40,10 @@ export interface TabsInterface {
 	tabs: TabInterface[];
 }
 
-export const Tabs: React.FC<TabsInterface> = ({ design, tabs }) => {
+export const Tabs: React.FunctionComponent<TabsInterface> = ({
+	design,
+	tabs,
+}) => {
 	const primaryTabIndex = tabs.findIndex((tab) => tab.primary);
 	const [activeIndex, setActiveIndex] = useState<number>(
 		primaryTabIndex === -1 ? 0 : primaryTabIndex,

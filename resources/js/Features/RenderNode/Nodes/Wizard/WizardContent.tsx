@@ -9,7 +9,9 @@ export interface WizardContentInterface {
 	nodes: NodeType[];
 }
 
-export const WizardContent: React.FC<WizardContentInterface> = ({ nodes }) => {
+export const WizardContent: React.FunctionComponent<WizardContentInterface> = ({
+	nodes,
+}) => {
 	const { submit } = useContext(FormContext);
 
 	const reloadStep = async () => {

@@ -13,7 +13,7 @@ export interface FormButtonInterface {
 	withoutFrontendValidation: boolean;
 }
 
-export const FormButton: React.FC<FormButtonInterface> = ({
+export const FormButton: React.FunctionComponent<FormButtonInterface> = ({
 	title,
 	color,
 	design,

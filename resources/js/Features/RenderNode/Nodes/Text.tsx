@@ -9,7 +9,10 @@ export interface TextInterface {
 	color: string | null;
 }
 
-export const Text: React.FC<TextInterface> = ({ nodesAndStrings, color }) => {
+export const Text: React.FunctionComponent<TextInterface> = ({
+	nodesAndStrings,
+	color,
+}) => {
 	return (
 		<span
 			style={{

@@ -11,7 +11,7 @@ export interface AlertBannerInterface {
 	icon: string | null;
 }
 
-export const AlertBanner: React.FC<AlertBannerInterface> = ({
+export const AlertBanner: React.FunctionComponent<AlertBannerInterface> = ({
 	description,
 	buttons,
 	icon,

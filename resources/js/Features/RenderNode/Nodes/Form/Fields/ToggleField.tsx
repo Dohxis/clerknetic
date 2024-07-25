@@ -14,6 +14,6 @@ export interface ToggleFieldInterface
 	nodeType: "ToggleField";
 }
 
-export const ToggleField: React.FC<ToggleFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={ToggleFieldComponent} />
-);
+export const ToggleField: React.FunctionComponent<ToggleFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={ToggleFieldComponent} />;

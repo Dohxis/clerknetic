@@ -11,7 +11,9 @@ export interface TextFieldInterface extends FieldInterface<string | null> {
 	autofocus?: boolean;
 }
 
-export const TextField: React.FC<TextFieldInterface> = (props) => {
+export const TextField: React.FunctionComponent<TextFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		label,

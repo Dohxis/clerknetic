@@ -3,7 +3,7 @@ import React, { ReactElement, useEffect, useState } from "react";
 
 interface FadeTransitionInterface {
 	child: ReactElement | null;
-	as?: React.FC | string;
+	as?: React.FunctionComponent | string;
 	className?: string;
 }
 
@@ -11,11 +11,9 @@ interface FadeTransitionInterface {
  * This component makes it easy to add fadeIn and
  * fadeOut transitions for adding and removing nodes.
  */
-export const FadeTransition: React.FC<FadeTransitionInterface> = ({
-	child: givenChild,
-	as,
-	className,
-}) => {
+export const FadeTransition: React.FunctionComponent<
+	FadeTransitionInterface
+> = ({ child: givenChild, as, className }) => {
 	const [activeChild, setActiveChild] = useState(givenChild);
 
 	useEffect(() => {

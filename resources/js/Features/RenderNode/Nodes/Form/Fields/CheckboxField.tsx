@@ -16,9 +16,9 @@ export interface CheckboxFieldInterface
 	nodeType: "CheckboxField";
 }
 
-export const CheckboxField: React.FC<CheckboxFieldInterface> = (props) => (
-	<FieldWrapper props={{ ...props }} field={CheckboxFieldComponent} />
-);
+export const CheckboxField: React.FunctionComponent<CheckboxFieldInterface> = (
+	props,
+) => <FieldWrapper props={{ ...props }} field={CheckboxFieldComponent} />;
 
 interface CheckboxFieldComponentInterface extends FieldInterface<boolean> {
 	label: string | TextInterface;
@@ -27,7 +27,9 @@ interface CheckboxFieldComponentInterface extends FieldInterface<boolean> {
 	disabled?: boolean;
 }
 
-const CheckboxFieldComponent: React.FC<CheckboxFieldInterface> = (props) => {
+const CheckboxFieldComponent: React.FunctionComponent<
+	CheckboxFieldInterface
+> = (props) => {
 	const {
 		name,
 		value = false,

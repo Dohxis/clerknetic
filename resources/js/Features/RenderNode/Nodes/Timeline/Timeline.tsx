@@ -7,7 +7,9 @@ export interface TimelineInterface {
 	timelineItems: TimelineItemInterface[];
 }
 
-export const Timeline: React.FC<TimelineInterface> = ({ timelineItems }) => {
+export const Timeline: React.FunctionComponent<TimelineInterface> = ({
+	timelineItems,
+}) => {
 	return (
 		<div className="-m-4 sm:-m-6">
 			<table className="w-full">

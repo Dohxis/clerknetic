@@ -22,7 +22,9 @@ export interface HasManyFieldInterface
 	templateDefaultValue: ItemValuesType;
 }
 
-export const HasManyField: React.FC<HasManyFieldInterface> = (props) => {
+export const HasManyField: React.FunctionComponent<HasManyFieldInterface> = (
+	props,
+) => {
 	const {
 		label,
 		name,
@@ -149,7 +151,7 @@ interface ItemInterface {
 	onRemove: () => void;
 }
 
-const Item: React.FC<ItemInterface> = ({
+const Item: React.FunctionComponent<ItemInterface> = ({
 	values,
 	errors,
 	template,

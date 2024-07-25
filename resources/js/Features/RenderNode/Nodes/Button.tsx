@@ -23,7 +23,7 @@ export interface ButtonInterface extends ButtonInstanceInterface {
 	className?: string;
 }
 
-export const Button: React.FC<ButtonInterface> = ({
+export const Button: React.FunctionComponent<ButtonInterface> = ({
 	title,
 	type,
 	link,

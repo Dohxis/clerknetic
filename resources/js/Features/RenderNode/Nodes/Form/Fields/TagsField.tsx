@@ -14,6 +14,6 @@ export interface TagsFieldInterface
 	nodeType: "TagsField";
 }
 
-export const TagsField: React.FC<TagsFieldInterface> = (props) => (
-	<FieldWrapper props={props} field={TagsFieldComponent} />
-);
+export const TagsField: React.FunctionComponent<TagsFieldInterface> = (
+	props,
+) => <FieldWrapper props={props} field={TagsFieldComponent} />;

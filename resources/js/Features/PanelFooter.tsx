@@ -4,7 +4,7 @@ interface PanelFooterInterface extends PropsWithChildren {
 	className?: string;
 }
 
-export const PanelFooter: React.FC<PanelFooterInterface> = ({
+export const PanelFooter: React.FunctionComponent<PanelFooterInterface> = ({
 	className,
 	children,
 }) => {

@@ -6,9 +6,9 @@ interface NoResultsFoundInterface {
 	className?: string;
 }
 
-export const NoResultsFound: React.FC<NoResultsFoundInterface> = ({
-	className = "",
-}) => {
+export const NoResultsFound: React.FunctionComponent<
+	NoResultsFoundInterface
+> = ({ className = "" }) => {
 	const { t } = useTranslation();
 
 	return (

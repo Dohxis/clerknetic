@@ -3,7 +3,7 @@ import { Panel } from "../../../../Panel/Panel";
 import { RenderNodes } from "../../../RenderNodes";
 import { CardDesignInterface } from "../Card";
 
-export const CardSimpleDesign: React.FC<CardDesignInterface> = ({
+export const CardSimpleDesign: React.FunctionComponent<CardDesignInterface> = ({
 	title,
 	description,
 	image,

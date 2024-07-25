@@ -24,7 +24,9 @@ export interface SelectFieldInterface
 	options: OptionInterface[];
 }
 
-export const SelectField: React.FC<SelectFieldInterface> = (props) => {
+export const SelectField: React.FunctionComponent<SelectFieldInterface> = (
+	props,
+) => {
 	const {
 		name,
 		label,
@@ -275,7 +277,7 @@ interface OptionItemInterface extends Pick<OptionInterface, "label" | "image"> {
 	selected?: boolean;
 }
 
-const OptionItem: React.FC<OptionItemInterface> = ({
+const OptionItem: React.FunctionComponent<OptionItemInterface> = ({
 	label,
 	image,
 	selected = false,

@@ -16,7 +16,9 @@ export interface WizardStepInterface {
 	highlighted: boolean;
 }
 
-export const WizardHeader: React.FC<WizardHeaderInterface> = (props) => {
+export const WizardHeader: React.FunctionComponent<WizardHeaderInterface> = (
+	props,
+) => {
 	const Tag =
 		props.design === "STEPS" ? HeaderStepsDesign : HeaderProgressDesign;
 

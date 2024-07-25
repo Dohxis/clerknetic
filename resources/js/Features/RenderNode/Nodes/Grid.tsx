@@ -11,7 +11,11 @@ export interface GridInterface {
 	columns: ResponsiveValueInterface<number[]>;
 }
 
-export const Grid: React.FC<GridInterface> = ({ nodes, gap, columns }) => {
+export const Grid: React.FunctionComponent<GridInterface> = ({
+	nodes,
+	gap,
+	columns,
+}) => {
 	const getGapClassName = (gap: number) => {
 		return {
 			0: "gap-0",

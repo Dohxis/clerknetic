@@ -22,7 +22,7 @@ interface PricingPeriodIntervalInterface {
 	active: boolean;
 }
 
-export const PricingPlan: React.FC<PricingPlanInterface> = ({
+export const PricingPlan: React.FunctionComponent<PricingPlanInterface> = ({
 	title,
 	description,
 	features,
@@ -94,7 +94,7 @@ interface FeatureInterface {
 	title: string;
 }
 
-const Feature: React.FC<FeatureInterface> = ({ title }) => {
+const Feature: React.FunctionComponent<FeatureInterface> = ({ title }) => {
 	return (
 		<div className="flex items-start space-x-3 space-y-1">
 			<Icon

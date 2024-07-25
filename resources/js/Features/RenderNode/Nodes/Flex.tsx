@@ -12,7 +12,7 @@ export interface FlexInterface {
 	nodes: NodeType[];
 }
 
-export const Flex: React.FC<FlexInterface> = ({
+export const Flex: React.FunctionComponent<FlexInterface> = ({
 	display,
 	justifyContent,
 	alignItems,

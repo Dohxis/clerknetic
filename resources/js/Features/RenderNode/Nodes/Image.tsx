@@ -6,6 +6,7 @@ export interface ImageInterface {
 	alt: string;
 }
 
-export const Image: React.FC<ImageInterface> = ({ src, alt }) => (
-	<img src={src} alt={alt} />
-);
+export const Image: React.FunctionComponent<ImageInterface> = ({
+	src,
+	alt,
+}) => <img src={src} alt={alt} />;

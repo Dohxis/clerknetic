@@ -8,7 +8,7 @@ export interface TimelineItemInterface {
 	date: string | null;
 }
 
-export const TimelineItem: React.FC<TimelineItemInterface> = ({
+export const TimelineItem: React.FunctionComponent<TimelineItemInterface> = ({
 	title,
 	description,
 	date,

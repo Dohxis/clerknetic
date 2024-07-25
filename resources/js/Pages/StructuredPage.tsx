@@ -4,7 +4,7 @@ import { RenderNodes } from "../Features/RenderNode/RenderNodes";
 import { PagePropsType } from "../Interfaces/PagePropsType";
 import { usePage } from "@inertiajs/react";
 
-const StructuredPage: React.FC = () => {
+const StructuredPage: React.FunctionComponent = () => {
 	const { nodes } = usePage<PagePropsType>().props;
 
 	console.log({ nodes });

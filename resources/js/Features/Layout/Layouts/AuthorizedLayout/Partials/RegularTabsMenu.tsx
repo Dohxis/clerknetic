@@ -7,10 +7,9 @@ interface RegularTabsMenuInterface {
 	className?: string;
 }
 
-export const RegularTabsMenu: React.FC<RegularTabsMenuInterface> = ({
-	tabs,
-	className,
-}) => (
+export const RegularTabsMenu: React.FunctionComponent<
+	RegularTabsMenuInterface
+> = ({ tabs, className }) => (
 	<nav
 		className={`flex h-8 w-full space-x-4 overflow-x-auto px-4 sm:h-10 sm:space-x-8 sm:px-6 ${className}`}
 	>

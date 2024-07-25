@@ -5,7 +5,9 @@ export interface SplitterInterface {
 	title: string | null;
 }
 
-export const Splitter: React.FC<SplitterInterface> = ({ title }) => {
+export const Splitter: React.FunctionComponent<SplitterInterface> = ({
+	title,
+}) => {
 	return (
 		<div className="flex items-center">
 			<div className="flex-1 border-b border-gray-300" />

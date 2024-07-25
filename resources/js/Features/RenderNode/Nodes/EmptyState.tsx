@@ -11,7 +11,7 @@ export interface EmptyStateInterface extends PropsWithChildren {
 	className?: string;
 }
 
-export const EmptyState: React.FC<EmptyStateInterface> = ({
+export const EmptyState: React.FunctionComponent<EmptyStateInterface> = ({
 	title,
 	description,
 	image,

@@ -6,11 +6,11 @@ export interface FieldLabelInterface extends PropsWithChildren {
 	id: string | null;
 	required: boolean;
 	explanation: string | null | undefined;
-	as?: React.FC | string;
+	as?: React.FunctionComponent | string;
 	className?: string;
 }
 
-export const FieldLabel: React.FC<FieldLabelInterface> = ({
+export const FieldLabel: React.FunctionComponent<FieldLabelInterface> = ({
 	id,
 	required,
 	explanation = null,

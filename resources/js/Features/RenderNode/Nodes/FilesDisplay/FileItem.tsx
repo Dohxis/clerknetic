@@ -10,7 +10,10 @@ export interface FileItemInterface {
 	nodes: NodeType[];
 }
 
-export const FileItem: React.FC<FileItemInterface> = ({ title, nodes }) => (
+export const FileItem: React.FunctionComponent<FileItemInterface> = ({
+	title,
+	nodes,
+}) => (
 	<div className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
 		<div className="flex w-0 flex-1 items-center">
 			<Icon
