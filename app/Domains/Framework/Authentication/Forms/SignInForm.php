@@ -2,7 +2,6 @@
 
 namespace App\Domains\Framework\Authentication\Forms;
 
-use App\Domains\Framework\Authentication\Exceptions\HomepageNotFoundException;
 use App\Domains\Framework\Authentication\Pages\ForgotPasswordPage;
 use App\Domains\Framework\Component\Components\Flex\Enums\Justify;
 use App\Domains\Framework\Component\Components\Flex\Flex;
@@ -48,9 +47,6 @@ class SignInForm extends ProcessableForm
 		]);
 	}
 
-	/**
-	 * @throws HomepageNotFoundException
-	 */
 	public function handle(object $validated)
 	{
 		$throttleKey = Str::lower(

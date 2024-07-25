@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, useEffect, useState } from "react";
+import { forwardRef, ReactNode, useEffect, useState } from "react";
 import { LoadingIcon } from "./Icons/LoadingIcon";
 import { Link } from "./Link";
 
@@ -42,11 +42,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonInterface>(
 			// Sets minimum loading time
 			if (givenLoading && timeoutLoadingEnded) {
 				setTimeoutLoadingEnded(false);
+
 				setTimeout(() => setTimeoutLoadingEnded(true), 200);
 			}
 		}, [givenLoading]);
 
 		const loading = givenLoading || !timeoutLoadingEnded;
+
+		const primaryColorClassName = {
+			primary: `[--btn-bg:theme(colors.primary.600)] [--btn-border:theme(colors.primary.700/90%)]`,
+			red: `[--btn-bg:theme(colors.red.600)] [--btn-border:theme(colors.red.700/90%)]`,
+			yellow: `[--btn-bg:theme(colors.yellow.600)] [--btn-border:theme(colors.yellow.700/90%)]`,
+			gray: `[--btn-bg:theme(colors.gray.600)] [--btn-border:theme(colors.gray.700/90%)]`,
+		}[color];
 
 		const colorClassName = {
 			primary: `bg-primary-600 focus:shadow-outline ${
@@ -94,14 +102,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonInterface>(
 			}`;
 		};
 
-		// TODO: move icon login from Button node component to here
-
 		return (
 			<Link
 				ref={ref}
-				className={`relative flex min-h-[2.25rem] w-full items-center justify-center rounded-md px-4 py-1 text-sm font-medium transition duration-150 disabled:cursor-default ${
-					silentDisabled ? "" : "disabled:opacity-40"
-				} ${getDesignClassName()} ${className}`}
+				className={
+					design === "primary"
+						? `${primaryColorClassName} [--btn-hover-overlay:theme(colors.white/10%)] after:-z-10 after:absolute after:active:bg-[--btn-hover-overlay] after:disabled:shadow-none after:hover:bg-[--btn-hover-overlay] after:inset-0 after:rounded-[calc(theme(borderRadius.md)-1px)] after:shadow-[shadow:inset_0_1px_theme(colors.white/15%)] before:-z-10 before:absolute before:bg-[--btn-bg] before:disabled:shadow-none before:inset-0 before:rounded-[calc(theme(borderRadius.md)-1px)] before:shadow bg-[--btn-border] border border-transparent cursor-pointer disabled:opacity-50 focus:outline-none font-semibold isolate flex items-center justify-center relative rounded-md px-4 py-2 text-white w-full text-sm`
+						: `relative flex min-h-[2.25rem] w-full items-center justify-center rounded-md px-4 py-1 text-sm font-medium transition duration-150 disabled:cursor-default ${
+								silentDisabled ? "" : "disabled:opacity-40"
+							} ${getDesignClassName()} ${className}`
+				}
 				type={type}
 				link={link}
 				loading={loading}
