@@ -7,7 +7,7 @@ import { usePage } from "@inertiajs/react";
 const StructuredPage: React.FC = () => {
 	const { nodes } = usePage<PagePropsType>().props;
 
-	console.log("nodes", nodes);
+	console.log({ nodes });
 
 	return <RenderNodes nodes={nodes} />;
 };

@@ -26,7 +26,11 @@ class SignInPage extends Page
 
 	public function layout(): Layout
 	{
-		return UnauthorizedLayout::make();
+		return UnauthorizedLayout::make()
+			->setPanelTitle("Sign in to Clerknetic")
+			->setPanelDescription("Don't have an account?")
+			->setPanelDescriptionLinkText("Sign up")
+			->setPanelDescriptionLinkHref(RegisterPage::getRoute());
 	}
 
 	public function nodes(): array

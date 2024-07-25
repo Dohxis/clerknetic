@@ -44,7 +44,7 @@ class SignInForm extends ProcessableForm
 						->setTextAlign(Align::RIGHT)
 						->toPage(ForgotPasswordPage::class),
 				]),
-			FormButton::make()->setTitle("Login"),
+			FormButton::make()->setTitle("Sign in"),
 		]);
 	}
 

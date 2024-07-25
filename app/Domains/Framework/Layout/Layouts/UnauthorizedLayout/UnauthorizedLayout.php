@@ -2,49 +2,50 @@
 
 namespace App\Domains\Framework\Layout\Layouts\UnauthorizedLayout;
 
-use App\Domains\Framework\Component\Components\Text;
 use App\Domains\Framework\Core\Utilities\ExportBuilder;
 use App\Domains\Framework\Layout\Layout;
-use App\Domains\Framework\Layout\Layouts\UnauthorizedLayout\Enums\Width;
 
 class UnauthorizedLayout extends Layout
 {
-	private ?Text $subtitle = null;
+	private string $panelTitle;
 
-	private string $width = Width::LG;
+	private string $panelDescription;
+
+	private string $panelDescriptionLinkText;
+
+	private string $panelDescriptionLinkHref;
 
 	public static function make(): self
 	{
 		return new self();
 	}
 
-	/**
-	 * @param string|null|Text $subtitle
-	 * @return static
-	 */
-	public function setSubtitle(string|null|Text $subtitle)
+	public function setPanelTitle(string $panelTitle): self
 	{
-		$this->subtitle = Text::make($subtitle);
+		$this->panelTitle = $panelTitle;
 
 		return $this;
 	}
 
-	/**
-	 * @return static
-	 */
-	public function asWidthLG()
+	public function setPanelDescription(string $panelDescription): self
 	{
-		$this->width = Width::LG;
+		$this->panelDescription = $panelDescription;
 
 		return $this;
 	}
 
-	/**
-	 * @return static
-	 */
-	public function asWidth2XL()
-	{
-		$this->width = Width::XL2;
+	public function setPanelDescriptionLinkText(
+		string $panelDescriptionLinkText
+	): self {
+		$this->panelDescriptionLinkText = $panelDescriptionLinkText;
+
+		return $this;
+	}
+
+	public function setPanelDescriptionLinkHref(
+		string $panelDescriptionLinkHref
+	): self {
+		$this->panelDescriptionLinkHref = $panelDescriptionLinkHref;
 
 		return $this;
 	}
@@ -55,8 +56,16 @@ class UnauthorizedLayout extends Layout
 	public function export(): array
 	{
 		return ExportBuilder::make($this)
-			->addProperty("subTitle", $this->subtitle)
-			->addProperty("width", $this->width)
+			->addProperty("panelTitle", $this->panelTitle)
+			->addProperty("panelDescription", $this->panelDescription)
+			->addProperty(
+				"panelDescriptionLinkText",
+				$this->panelDescriptionLinkText
+			)
+			->addProperty(
+				"panelDescriptionLinkHref",
+				$this->panelDescriptionLinkHref
+			)
 			->export();
 	}
 }

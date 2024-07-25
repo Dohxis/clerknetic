@@ -60,7 +60,7 @@ export const Layout: React.FunctionComponent<LayoutInterface> = ({
 				<Head title={layoutProperties.title ?? undefined} />
 
 				{/* @ts-ignore */}
-				<LayoutComponent {...layoutProperties}>
+				<LayoutComponent {...layout} {...layoutProperties}>
 					{children}
 				</LayoutComponent>
 			</Notifications>
