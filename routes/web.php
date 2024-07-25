@@ -1,14 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Domains\Framework\Authentication\Operations\LogoutOperation;
+use App\Domains\Framework\Authentication\Pages\SignInPage;
+use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
 
-require __DIR__ . "/auth.php";
-
-Route::get("/", function () {
-    if (Auth::check()) {
-        return redirect("/acme/workflows");
-    }
-
-    return redirect("/sign-in");
+Route::middleware(['guest'])->group(function () {
+    SignInPage::register();
 });
+
+LogoutOperation::register();
+
+Route::get("/", fn() => redirect(AppServiceProvider::getHomepage()));

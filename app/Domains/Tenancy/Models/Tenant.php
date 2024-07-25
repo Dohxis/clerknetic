@@ -12,8 +12,8 @@ use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
  *
  * @property string $id
  * @property array|null $data
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @method static \Stancl\Tenancy\Database\TenantCollection<int, static> all($columns = ['*'])
  * @method static \Stancl\Tenancy\Database\TenantCollection<int, static> get($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant newModelQuery()

@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Stancl\Tenancy\Exceptions\TenantDatabaseDoesNotExistException;
 
 class Setup extends Command
 {
@@ -15,6 +16,14 @@ class Setup extends Command
     public function handle()
     {
         $this->info("Freshly migrating the database...");
+
+        try {
+            $this->call("tenants:migrate-fresh");
+        } catch (TenantDatabaseDoesNotExistException $exception) {
+            // We ignore this exception as the SQLite file was
+            // probably deleted manually.
+        }
+
         $this->call("migrate:fresh");
 
         $this->info("Generating IDE helper files...");

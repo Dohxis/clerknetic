@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Domains\Tenancy\Models\Tenant;
 use App\Models\Organization;
+use App\Models\OrganizationUser;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -19,12 +20,21 @@ class DatabaseSeeder extends Seeder
             'tenant_id' => $tenant->id,
         ]);
 
-        $user = User::factory()->create([
-            'name' => 'John Doe',
-            'email' => 'test@example.com',
-            'last_organization_id' => $organization->id,
+        $globalUser = User::create([
+            'email' => 'test@example.com'
         ]);
 
-        $organization->users()->attach($user);
+        OrganizationUser::create([
+            'organization_id' => $organization->id,
+            'user_id' => $globalUser->id,
+        ]);
+
+        $tenant->run(function () use ($globalUser) {
+            User::factory()->create([
+                'id' => $globalUser->id,
+                'email' => $globalUser->email,
+                'name' => 'John Doe',
+            ]);
+        });
     }
 }

@@ -16,9 +16,6 @@ use Stancl\Tenancy\Middleware;
 
 class TenancyServiceProvider extends ServiceProvider
 {
-    // By default, no namespace is used to support the callable array syntax.
-    public static string $controllerNamespace = "";
-
     public function events()
     {
         return [
@@ -126,12 +123,22 @@ class TenancyServiceProvider extends ServiceProvider
     protected function mapRoutes()
     {
         $this->app->booted(function () {
-            if (file_exists(base_path("routes/tenant.php"))) {
-                Route::namespace(static::$controllerNamespace)->group(
-                    base_path("routes/tenant.php")
-                );
-            }
+//            if (file_exists(base_path("routes/user.php"))) {
+//                Route::middleware([])->group(
+//                    base_path("routes/user.php")
+//                );
+//            }
+
+            Route::middleware([
+                "web",
+                "auth",
+                Middleware\InitializeTenancyByPath::class,
+            ])
+                ->prefix("/{tenant}")
+                ->group(base_path("routes/user.php"));
         });
+
+
     }
 
     protected function makeTenancyMiddlewareHighestPriority()

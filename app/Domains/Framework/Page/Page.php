@@ -79,6 +79,20 @@ abstract class Page extends Controller
         return ExportBuilder::exportArray($navigation->getNavigationItems());
     }
 
+    public static function getRoute(): string
+    {
+        $page = new static();
+
+        return $page->route();
+    }
+
+    public static function getRouteName(): string
+    {
+        $page = new static();
+
+        return $page->routeName();
+    }
+
     protected function getPageTitle(): string
     {
         return $this->title();

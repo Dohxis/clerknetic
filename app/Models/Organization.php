@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Domains\Core\Traits\HasNamedId;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Stancl\Tenancy\Database\Concerns\CentralConnection;
 
 /**
  * 
@@ -13,9 +14,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $slug
  * @property string $name
  * @property string $tenant_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\OrganizationUser> $users
  * @property-read int|null $users_count
  * @method static \Database\Factories\OrganizationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Organization newModelQuery()
@@ -35,6 +36,8 @@ class Organization extends Model
 
     use HasNamedId;
 
+    use CentralConnection;
+
     protected string $namedIdPrefix = "org";
 
     /** @var array<int, string> */
@@ -42,6 +45,6 @@ class Organization extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->hasMany(OrganizationUser::class);
     }
 }
