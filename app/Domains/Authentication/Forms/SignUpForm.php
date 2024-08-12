@@ -10,30 +10,30 @@ use Illuminate\Validation\Rule;
 
 class SignUpForm extends ProcessableForm
 {
-    public function route(): string
-    {
-        return "/sign-up";
-    }
+	public function route(): string
+	{
+		return "/sign-up";
+	}
 
-    protected function form(Form $form): Form
-    {
-        return $form
-            ->withoutPanel()
-            ->setNodes([
-                TextField::make("Organization"),
-                TextField::make("Full name"),
-                TextField::make("Email")
-                    ->presetEmail()
-                    ->addValidationRule(Rule::unique("users")),
-                TextField::make("Password")->presetPassword(),
-                FormButton::make()->setTitle("Sign up"),
-            ]);
-    }
+	protected function form(Form $form): Form
+	{
+		return $form
+			->withoutPanel()
+			->setNodes([
+				TextField::make("Organization"),
+				TextField::make("Full name"),
+				TextField::make("Email")
+					->presetEmail()
+					->addValidationRule(Rule::unique("users")),
+				TextField::make("Password")->presetPassword(),
+				FormButton::make()->setTitle("Sign up"),
+			]);
+	}
 
-    public function handle(object $validated)
-    {
-        ray($validated);
+	public function handle(object $validated)
+	{
+		ray($validated);
 
-        return redirect()->back();
-    }
+		return redirect()->back();
+	}
 }

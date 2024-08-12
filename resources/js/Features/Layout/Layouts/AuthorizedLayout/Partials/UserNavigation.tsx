@@ -15,9 +15,9 @@ interface UserNavigationInterface {
 	items: UserNavigationItemInterface[];
 }
 
-export const UserNavigation: React.FC<UserNavigationInterface> = ({
-	items,
-}) => {
+export const UserNavigation: React.FunctionComponent<
+	UserNavigationInterface
+> = ({ items }) => {
 	const { t } = useTranslation();
 
 	const { user, balance } = usePage<PagePropsType>().props;

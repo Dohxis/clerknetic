@@ -11,42 +11,42 @@ use Throwable;
 
 class SendEmailVerificationOperation extends Operation
 {
-    use HasStore;
+	use HasStore;
 
-    public function route(): string
-    {
-        return "/auth/email/send";
-    }
+	public function route(): string
+	{
+		return "/auth/email/send";
+	}
 
-    /**
-     * @throws Throwable
-     */
-    public function handle(object $validated)
-    {
-        $throttleKey = Str::lower(
-            "send-email-verification|" . $this->store->user->id
-        );
+	/**
+	 * @throws Throwable
+	 */
+	public function handle(object $validated)
+	{
+		$throttleKey = Str::lower(
+			"send-email-verification|" . $this->store->user->id
+		);
 
-        $isRateLimitReached = RateLimiter::tooManyAttempts($throttleKey, 1);
+		$isRateLimitReached = RateLimiter::tooManyAttempts($throttleKey, 1);
 
-        if ($isRateLimitReached) {
-            Notification::danger(
-                trans("auth.throttle", [
-                    "seconds" => RateLimiter::availableIn($throttleKey),
-                ])
-            );
+		if ($isRateLimitReached) {
+			Notification::danger(
+				trans("auth.throttle", [
+					"seconds" => RateLimiter::availableIn($throttleKey),
+				])
+			);
 
-            return redirect()->back();
-        }
+			return redirect()->back();
+		}
 
-        $this->store->user->sendEmailVerificationNotification();
+		$this->store->user->sendEmailVerificationNotification();
 
-        RateLimiter::hit($throttleKey);
+		RateLimiter::hit($throttleKey);
 
-        Notification::success(
-            "Verification email has been sent. Please check your inbox."
-        );
+		Notification::success(
+			"Verification email has been sent. Please check your inbox."
+		);
 
-        return redirect()->back();
-    }
+		return redirect()->back();
+	}
 }

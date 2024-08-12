@@ -17,47 +17,47 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void
-    {
-        if ($this->app->isLocal()) {
-            $this->app->register(
-                \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
-            );
-        }
+	public function register(): void
+	{
+		if ($this->app->isLocal()) {
+			$this->app->register(
+				\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+			);
+		}
 
-        $this->app->singleton(
-            LayoutResolver::class,
-            fn() => AuthorizedLayout::make()
-        );
+		$this->app->singleton(
+			LayoutResolver::class,
+			fn() => AuthorizedLayout::make()
+		);
 
-        $this->app->singleton(
-            NavigationResolver::class,
-            fn() => new NavigationResolver([
-                NavigationItem::make("/acme/workflows", "Workflows"),
-            ])
-        );
-    }
+		$this->app->singleton(
+			NavigationResolver::class,
+			fn() => new NavigationResolver([
+				NavigationItem::make("/acme/workflows", "Workflows"),
+			])
+		);
+	}
 
-    public function boot(): void
-    {
-        Model::preventLazyLoading(!app()->isProduction());
+	public function boot(): void
+	{
+		Model::preventLazyLoading(!app()->isProduction());
 
-        Date::use(CarbonImmutable::class);
-    }
+		Date::use(CarbonImmutable::class);
+	}
 
-    public static function getHomepage(): string
-    {
-        /** @var User|null $user */
-        $user = Auth::user();
+	public static function getHomepage(): string
+	{
+		/** @var User|null $user */
+		$user = Auth::user();
 
-        if ($user === null) {
-            return SignInPage::getRoute();
-        }
+		if ($user === null) {
+			return SignInPage::getRoute();
+		}
 
-        $organizationUser = OrganizationUser::whereUserId($user->id)->first();
+		$organizationUser = OrganizationUser::whereUserId($user->id)->first();
 
-        $organizationSlug = $organizationUser->organization->slug;
+		$organizationSlug = $organizationUser->organization->slug;
 
-        return "/" . $organizationSlug . "/workflows";
-    }
+		return "/" . $organizationSlug . "/workflows";
+	}
 }

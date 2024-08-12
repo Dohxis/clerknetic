@@ -8,14 +8,13 @@ use Illuminate\Http\RedirectResponse;
 
 class VerifyEmailController
 {
-    public function __invoke(
-        EmailVerificationRequest $request
-    ): RedirectResponse
-    {
-        $request->fulfill();
+	public function __invoke(
+		EmailVerificationRequest $request
+	): RedirectResponse {
+		$request->fulfill();
 
-        Notification::success("Email has been successfully verified.");
+		Notification::success("Email has been successfully verified.");
 
-        return redirect()->to("/");
-    }
+		return redirect()->to("/");
+	}
 }

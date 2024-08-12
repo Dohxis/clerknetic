@@ -10,27 +10,27 @@ use App\Domains\Framework\Page\Page;
 
 class ForgotPasswordEmailSentPage extends Page
 {
-    public function title(): string
-    {
-        return "Reset password";
-    }
+	public function title(): string
+	{
+		return "Reset password";
+	}
 
-    public function route(): string
-    {
-        return "/password/sent";
-    }
+	public function route(): string
+	{
+		return "/password/sent";
+	}
 
-    public function layout(): Layout
-    {
-        return UnauthorizedLayout::make();
-    }
+	public function layout(): Layout
+	{
+		return UnauthorizedLayout::make();
+	}
 
-    public function nodes(): array
-    {
-        return [
-            Panel::make()
-                ->setPadding(10)
-                ->setNodes([Text::make("passwords.sent")]),
-        ];
-    }
+	public function nodes(): array
+	{
+		return [
+			Panel::make()
+				->setPadding(10)
+				->setNodes([Text::make("passwords.sent")]),
+		];
+	}
 }
